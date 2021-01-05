@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/teoria.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+{% block headers %}
+<div id="header-wrapper">
+	<div id="header" class="container row">
+		<div id="logo">
+            <h1>
+                <a href="{% url 'main_app:main' %}">Arduino</a>
+                <img src="{% static 'Im/arduino.png' %}" alt="">
+            </h1>
+        </div>
+		<div id="menu">
+			<ul>
+				<li><a href="{% url 'main_app:main' %}" accesskey="1">Inicio</a></li>
+				<li><a href="/#page-wrapper" accesskey="2">Proyectos</a></li>
+                <li><a href="/#page-wrapper1" accesskey="3">Teoria</a></li>
+                <li><a href="{% url 'main_app:main' %}" accesskey="4">Volver</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock headers %}
+        
+{% block content %}
+<div class="row mx-auto" id="content">
+    <div class="col-md-12 text-center">
+        <h1>Funciones</h1>
+        <br><hr>
+    </div>
+</div>
+<div class="row mx-auto" id="content" style="margin-left: 105px;">
+    <div class="col-md-5" id="exp">
+        <h2>¿Qué son?</h2>
+        <hr/>
+        <p class="text-justify">
+            Las funciones son bloques o segmentos de código que reciben un nombre y los cuales realizan o ejecutan una 
+            tarea específica dentro de un programa, esta herramienta es muy útil y utilizada dentro del paradigma de la 
+            programación estructurada, ya que permite dividir un programa de gran complejidad en segmentos de código más 
+            pequeños donde cada uno cumple una tarea diferente y este se puede repetir una cantidad N de veces dentro de 
+            un programa dependiendo de cual sea la necesidad. Dichas funciones tienen algunas reglas a tener en cuenta 
+            como parámetros de entrada, su salida, nombre y demás cosas. Además, se sabe que existen varios tipos de 
+            funciones las cuales tienen una utilidad diferente y es imporante conocer cada una de ellas con el fin de 
+            saber en qué momento y para qué usarlas.
+    </div>
+    <div class="col-md-5" id="expimg">
+        <br>
+        <img src="{% static 'Im/Computer.png' %}"/>
+    </div>
+</div>
+<div class="row mx-auto" id="content">
+    <div class="col-md-10" id="exp1">
+        <h2>Sintaxis</h2>
+        <hr/>
+        <p class="text-justify">
+            Para declarar una función se deben tener en cuenta tres cosas. Primero se debe poner el tipo de dato
+            el cual va a almacenar la variable, luego se debe poner el nombre que va a tener dicha variable, este 
+            nombre comunmente coinside con el dato el cual va a almacenar esta, pues de esta manera se facilita 
+            su uso; por último, aunque no se hace necesario, se le puede asignar un valor inicial a la variable, 
+            solo debe poner el signo de igual y posteriormente darle el valor que se desee, finalizando con un 
+            punto y coma.
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+tipo_de_función nombre_función(parámetros de entrada){
+    Instrucciones;
+}
+            </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content">
+    <div class="col-md-10" id="exp1">
+        <h2>Tipos de funciones</h2>
+        <hr/>
+        <p class="text-justify">
+            Dentro de los tipos de funciones que existen en Arduino para las variables se encuentran los números,
+            las letras, las cadenas de texto, los booleanos y entre otro. Dentro de los números se encuentran 
+            los enteros, los flotantes y binarios. A continuación se explica un poco de cada tipo para tener 
+            en cuenta cuál es el que se desea y se necesita utilizar para cada uno de los programas, además, se
+            mostrará su sintaxis dentro del lenguaje.
+        </p>
+        <br>
+        <h5 class="text-justify">Enteros: </h5>
+        <p class="text-justify">
+            Los números enteros son aquellos que contienen a todos los números que hay en la recta real antes y después 
+            del cero, sin tener en cuenta los infinitos puntos que hay entre un número y el otro, además, son aquellos 
+            que no poseen decimales o fracción, es decir, son exactos. Para declarar una variable con este tipo de dato, 
+            se debe poner la palabra "<span style="color: rgb(200, 147, 0);">int</span>" seguida del nombre de la 
+            variable. 
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+int nombre_variable = valor;
+            </code>
+            </pre>
+        </div>
+        <br>
+        <h5 class="text-justify">Flotantes o doubles: </h5>
+        <p class="text-justify">
+            Los números flotantes son aquellos que contienen los infinitos números que hay en la recta real antes y después 
+            del cero, además, son aquellos que poseen decimales o fracción, es decir, no son exactos y tienen números 
+            después del punto o de la coma. Para declarar una variable con este tipo de dato, se debe poner la palabra 
+            "<span style="color: rgb(200, 147, 0);">float</span>" seguida del nombre de la variable. Por otra parte, se 
+            encuentra los doubles que se definen teóricamente igual que el float, su diferencia es que este tipo de dato 
+            tiene más bits de almacenamiento, por lo que pueden ser muchos más los número que pueden guardarse después de 
+            la coma o el punto. Para declarar o nombrar este tipo de dato se debe poner la palabra  
+            "<span style="color: rgb(200, 147, 0);">float</span>"
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+float nombre_variable = valor;
+            </code>
+            </pre>
+        </div>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+double nombre_variable = valor;
+            </code>
+            </pre>
+        </div>
+        <br>
+        <h5 class="text-justify">Booleanos: </h5>
+        <p class="text-justify">
+            Los números booleanos son aquellos que contienen valores binarios, es decir, solo tienen dos posibilidades 
+            falso o verdades, alto o bajo o, 0 o 1. Estos valores usualmente se obtienen como resultado de expresiones 
+            lógicas que al ser evaluada, se obtiene como resultado alguno de estos valores. Para declarar un dato de este
+            tipo se debe poner la palabra "<span style="color: rgb(200, 147, 0);">boolt</span>" seguida del nombre de 
+            la variable.
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+bool nombre_variable = valor;
+            </code>
+            </pre>
+        </div>
+        <br>
+        <h5 class="text-justify">Letras: </h5>
+        <p class="text-justify">
+            Las letras son un tipo de dato en el que sea puede almacenar, como su nombre lo indica, cualquier letra del 
+            alfabeto, sin importar si es mayúscula o minúscula, pero solo se puede almacenar una sola letra a la vez. Para 
+            declarar una variable con este tipo de dato, se debe poner la palabra "<span style="color: rgb(200, 147, 0);">float</span>" 
+            seguida del nombre de la variable.
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+char nombre_variable = "valor";
+            </code>
+            </pre>
+        </div>
+        <p class="text-justify">
+            Para este problema, existe una variación en la cual se pueden guardar letras o frases completas y para esto se
+            declara como vector. Para declarar un vector con este tipo de dato, se debe poner la palabra 
+            "<span style="color: rgb(200, 147, 0);">float</span>" seguida del nombre del vector.
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+char[tamaño] nombre_vector = "valor";
+            </code>
+            </pre>
+        </div>
+        <br>
+        <h5 class="text-justify">Cadenas de texto: </h5>
+        <p class="text-justify">
+            Los string son tipos de datos que permiten almacernar palabras que no contengan caracteres especiales. Para 
+            declarar una variable con este tipo de dato, se debe poner la palabra "<span style="color: rgb(200, 147, 0);">float</span>" 
+            seguida del nombre de la variable.
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+string nombre_variable = valor;
+            </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content">
+    <div class="col-lg-12">
+        <h1 class="text-center">Ejemplos</h1><hr/>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #1</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo1' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #2</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo2' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #3</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo3' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #4</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo4' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #5</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo5' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #6</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo6' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" id="ant">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" id="sig">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}

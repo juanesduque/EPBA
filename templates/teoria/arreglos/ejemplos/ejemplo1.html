@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/ejemplos.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block headers %}
+<div id="header-wrapper">
+    <div id="header" class="container row">
+        <div id="logo">
+            <h1>
+                <a href="#">Arduino</a>
+                <img src="{% static 'Im/arduino.png' %}" alt="">
+            </h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#" accesskey="1">Inicio</a></li>
+                <li><a href="#" accesskey="2">Proyectos</a></li>
+                <li><a href="#" accesskey="3">Teoria</a></li>
+                <li><a href="#" accesskey="4">Volver</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock headers %}
+
+{% block content %}
+<!-- Enunciado -->
+<div class="row mx-auto content desactivate" id="enunciado">
+    <div class="row mx-auto">
+        <div class="col-md-12 text-center">
+            <h1 style="padding-bottom: 1em;">Ejemplo #1</h1>
+            <div class="col-md-5" id="mod">
+                <h3>Enunciado</h3><br>
+                <p>
+                    Los operadores son un tipo de símbolo que pueden aparecer en las expresiones, e indican al
+                    compilador la realización de determinadas operaciones matemáticas, lógicas y numéricas. Se
+                    pueden aplicar a variables u otros objetos denominados operandos.
+                </p>
+                <a href="#" id="empezar" class="button">Empezar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Código -->
+<div class="row mx-auto content" id="content">
+    <div class="col-md-5 mx-auto mod1" id="mod1">
+        <h3>Solución</h3><br>
+        <div class="text-justify mt-2">
+            <pre>
+                  <code class="language-python">
+<span id="1"><span class="pr-n mr-3">1</span>numero = int(input("Ingrese numero: "))</span>
+<span id="2"><span class="pr-n mr-3">2</span>numero *= 2</span>
+<span id="3"><span class="pr-n mr-3">3</span>print("El doble del numero es: ",numero)</span>
+                  </code>
+                </pre>
+        </div>
+        <div id="entradas" class="desactivate">
+            <div class="form-group">
+                <input type="text" clase="form-control" id="val0" style="width: 80%; border-color: rgb(220, 220, 220);"
+                    placeholder="Ingrese un numero">
+            </div>
+        </div>
+        <div id="salida" class="desactivate">
+            <p>
+                El doble del numero es: <span id="resultado"></span>
+            </p>
+        </div>
+        <div class="botones">
+            <a href="#" class="button" id="ejecutar">Ejecutar</a>
+            <a href="#" class="button desactivate" id="siguiente_">Siguiente</a>
+            <a href="#" class="button desactivate" id="reiniciar_">Reiniciar</a>
+        </div>
+    </div>
+    <!-- Explicación -->
+    <div class="col-md-5 mx-auto mod1 desactivate" id="expli">
+        <h3>Explicación</h3>
+      <pre>
+        <code class="language-python text-justify">
+<span id=""><span class="pr-n mr-3">1</span>Declaramos una variable llamada "numero" y la igualamos al valor que ingreso el usuario.</span>
+<span id=""><span class="pr-n mr-3">2</span>Utilizamos el operador *= para multiplicar "numero" por 2.</span>
+<span id=""><span class="pr-n mr-3">3</span>Imprimimos el doble del "numero".</span>
+        </code>
+      </pre>
+    </div>
+</div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    var num_entradas = 1,
+        cont = 0,
+        valores = []
+
+    document.getElementById('empezar').addEventListener('click', mostrar)
+
+    function mostrar() {
+        document.getElementById('enunciado').className = 'desactivate'
+        document.getElementById('content').className = 'row mx-auto content'
+    }
+
+    document.getElementById('ejecutar').addEventListener('click', () => {
+        document.getElementById('entradas').className = ''
+        document.getElementById('ejecutar').className = 'desactivate'
+        document.getElementById('siguiente_').className = 'button'
+    })
+
+    document.getElementById('siguiente_').addEventListener('click', () => {
+        var id_select = 'val' + cont,
+            valor_entrada = parseInt(document.getElementById(id_select).value)
+        cont++
+        valor_entrada *= 2
+        valores.push(valor_entrada)
+
+        if (cont == num_entradas) {
+            document.getElementById('entradas').className = 'desactivate'
+            document.getElementById('siguiente_').className = 'desactivate'
+            document.getElementById('reiniciar_').className = 'button'
+            document.getElementById('salida').className = ''
+            document.getElementById('resultado').innerHTML = valores[0]
+            document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+        }
+    })
+
+    document.getElementById('reiniciar_').addEventListener('click', () => {
+        location.reload()
+    })
+
+</script>
+{% endblock scripts %}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/teoria.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block headers %}
+<div id="header-wrapper">
+	<div id="header" class="container row">
+		<div id="logo">
+            <h1>
+                <a href="{% url 'main_app:main' %}">Arduino</a>
+                <img src="{% static 'Im/arduino.png' %}" alt="">
+            </h1>
+        </div>
+		<div id="menu">
+			<ul>
+				<li><a href="{% url 'main_app:main' %}" accesskey="1">Inicio</a></li>
+				<li><a href="/#page-wrapper" accesskey="2">Proyectos</a></li>
+                <li><a href="/#page-wrapper1" accesskey="3">Teoria</a></li>
+                <li><a href="{% url 'main_app:main' %}" accesskey="4">Volver</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock headers %}
+        
+{% block content %}
+<div class="row mx-auto" id="content">
+    <div class="col-md-12 text-center">
+        <h1>Pines digitales</h1>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content">
+    <div class="col-lg-12">
+        <h1 class="text-center">Ejemplos</h1><hr/>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #1</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo1' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #2</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo2' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #3</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo3' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #4</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo4' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #5</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo5' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #6</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" />
+                        <br><br>
+                        <a href="{% url 'operadores_app:ejemplo6' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" id="ant">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" id="sig">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}

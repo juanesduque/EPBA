@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/teoria.css' %}" type="text/css" media="all">
+{% endblock styles %}
+
+
+{% block headers %}
+<div id="header-wrapper">
+	<div id="header" class="container row">
+		<div id="logo">
+            <h1>
+                <a href="{% url 'main_app:main' %}">Arduino</a>
+                <img src="{% static 'Im/arduino.png' %}" alt="">
+            </h1>
+        </div>
+		<div id="menu">
+			<ul>
+				<li><a href="{% url 'main_app:main' %}" accesskey="1">Inicio</a></li>
+				<li><a href="/#page-wrapper" accesskey="2">Proyectos</a></li>
+                <li><a href="/#page-wrapper1" accesskey="3">Teoria</a></li>
+                <li><a href="{% url 'main_app:main' %}" accesskey="4">Volver</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock headers %}
+        
+{% block content %}
+<div class="row mx-auto" id="content">
+    <div class="col-md-12 text-center">
+        <h1>Operadores</h1>
+        <br><hr/>
+    </div>
+</div>
+<div class="row mx-auto" id="content" style="margin-left: 105px;">
+    <div class="col-md-5" id="exp">
+        <h2>¿Qué son?</h2>
+        <hr/>
+        <p class="text-justify">
+            Los operadores son un tipo de símbolo o caracter que pueden aparecer en las expresiones u operaciones, estos 
+            indican al programa la realización de determinadas operaciones lógicas o matemáticas. Se pueden aplicar a 
+            variables u otros objetos denominados operandos los cuales luego de ser operadas van a arrojar valores ya sea 
+            de tipo numérico o booleano, dependiendo cuál sea el caso.
+        </p>
+    </div>
+    <div class="col-md-5" id="expimg">
+        <img src="{% static 'Im/Computer.png' %}"/>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content" style="margin-left: 105px;">
+    <div class="col-md-5" id="exp">
+        <h2>Operadores aritméticos</h2>
+        <hr/>
+        <p class="text-justify">
+            Los operadores aritméticos son aquellos que se representan con símbolos y con los cuales, dependiendo de su 
+            posición, realizan una operación matemática u asignación a los diferentes datos que se deben de operar para 
+            la obtención de los resultados solicitados o los cuales dan solución a un problema.
+        </p>
+</div>
+<div class="col-md-5" id="exp">
+        <h2>Operadotes lógicos</h2>
+        <hr/>
+        <p class="text-justify">
+            Los operadores lógicos son un tipo de símbolo que puede aparecer en las expresiones lógicas, e indican al 
+            compilador la realización de determinadas operaciones lógicas, de las cuales se va a obtener valores booleanos 
+            ya sea, true o false, 1 o 0 y, en el caso de Arduino high o low. Con ese resultado se puede dar control a un 
+            programa utilizando las demás estructuras que brindan dicha posibilidad.
+        </p>
+    </div>
+</div>
+<div class="row mx-auto" id="content">
+    <div class="col-md-10" id="exp1">
+        <h2>Operadores relacionales</h2>
+        <hr/>
+        <p class="text-justify">
+            Los operadores relacionales son los que permiten asignar o dar un valor o valores específicos a una variable 
+            para de esta manera hacer saber al programa el valor de la variable y posteriormente operar con ella o 
+            compararla con otras variables. 
+        </p>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content">
+    <div class="col-md-10" id="exp1">
+        <h2>Sintaxis</h2>
+        <hr/>
+        <p class="text-justify">
+            Para cada operador puede cambiar un poco la sintaxis, por lo que se mostrarán los casos que se pueden presentar 
+            en un programa y de esta manera dejar claridad en el alumno de cómo se deben usar y en qué casos. Para empezar, 
+            se tienen los operadores aritméticos, estos se dividen en dos, los unidireccionales y los bidireccionales. 
+            Los unidireccionales son aquellos que tienen operando a su lado derecho y se usan para dar un sentido a los 
+            valores, a continuación se muestra cómo:
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+int numero = -18;
+int dato = +18;
+            </code>
+            </pre>
+        </div>
+        <p class="text-justify">
+            Por otra parte, los bidireccionales son los que tienen operandos a cada lado y son estos los que permiten 
+            realizar operacionas matemáticas tales como la suma, resta, multiplicación y división, en este caso, en la 
+            variable se guarda el resultado de la operación que se realice, en el siguiente fragmento se muestra:
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+int numero = 20-18;
+            </code>
+            </pre>
+        </div>
+        <p class="text-justify">
+            Ahora, en los operadores relacionales, solo basta con darle un valor a una variable, de esta manera la 
+            variable toma el valor que se le asigne tal y como se muestra a continuación:
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+int numero = 20;
+            </code>
+            </pre>
+        </div>
+        <p class="text-justify">
+            Por último, se tienen los operadores lógicos, estos son únicamente bidireccionales, es decir, tiene un operando 
+            a cada lado y de esta manera evalua si una expresión es falsa o verdadera. En el siguiente fragmento se muestra 
+            cómo:
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+bool estado = 20>=10;
+            </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content">
+    <div class="col-lg-12">
+        <h1 class="text-center">Ejemplos</h1><br><hr/><br>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #1</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" /><br><br>
+                        <a href="{% url 'operadores_app:ejemplo1' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #2</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" /><br><br>
+                        <a href="{% url 'operadores_app:ejemplo2' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #3</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" /><br><br>
+                        <a href="{% url 'operadores_app:ejemplo3' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #4</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" /><br><br>
+                        <a href="{% url 'operadores_app:ejemplo4' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #5</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" /><br><br>
+                        <a href="{% url 'operadores_app:ejemplo5' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #6</h2><br>
+                        <img src="{% static 'Im/Computer.png' %}" alt="" /><br><br>
+                        <a href="{% url 'operadores_app:ejemplo6' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" id="ant">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" id="sig">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
