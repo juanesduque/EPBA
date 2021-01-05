@@ -1,0 +1,1 @@
+web: gunicorn EPBA.wsgi --log-file -
