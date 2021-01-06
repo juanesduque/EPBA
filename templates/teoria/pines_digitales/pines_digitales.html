@@ -65,16 +65,30 @@
         <hr/>
         <p class="text-justify">
             Para controlar los pines digitales hay que tener varias cosas en cuenta. Primero se sabe que el pin se puede 
-            almacenar en una variable que tenga el nombre del parámetro que se va a leer o se puede poner directamente 
-            el número de dicho pin y segundo, para realizar la lectura de cualquiera de estos pines se debe utilizar el 
-            comando analogRead(), el cual tiene como parámetros el nombre de la variable donde se almacenó el pin o el 
-            número del pin directamente como ya se había mencionado. Una recomendación, es que la lectura de dicho pin 
-            se almacene en una nueva variable para posteriormente realizar diferentes operaciones o acciones con ella.
+            almacenar en una variable que tenga el nombre del parámetro que se va a leer o del dispositivo que se desea
+            controlar y también se podría poner directamente el número de dicho pin para realizar cualuier acción. Segundo, 
+            para realizar la lectura de cualquiera de estos pines se debe utilizar el comando digitalRead(), el cual tiene 
+            como parámetro el nombre de la variable donde se almacenó el pin o el número del pin directamente como ya se 
+            había mencionado. Una recomendación nuevamente, es que la lectura de dicho pin se almacene en una nueva 
+            variable para posteriormente realizar diferentes operaciones o acciones con ella. Por último, para enviar 
+            una señal a ya sea de 0 voltios, 5 voltios o de PWM, se debe usar el comando digitalWrite(), el cual tiene 
+            como parámetros el nombre de la variable donde se almacenó el pin o el número del pin directamente como ya se 
+            había mencionado, seguido de una coma y el valor de voltaje que se le quiere dar, ya sea alto o bajo (HIGH o 
+            LOW); o un valor de PWM que puede tomar valores entre 0 y 255.
         </p>
+        <h5 class="text-justify">Para leer el pin:</h5>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
             <code class="language-c++">
-digitalWrite(pin, valor_PWM);
+nueva_variable = digitalRead(pin_digital);
+            </code>
+            </pre>
+        </div>
+        <h5 class="text-justify">Para enviar una señal al pin:</h5>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+digitalWrite(pin_digital, valor);
             </code>
             </pre>
         </div>
