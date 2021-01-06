@@ -45,11 +45,33 @@
             para de esta manera empezar a trabajar con él a lo largo del programa. Dicho de otra forma, lo que se hace es 
             dar nombre a cualquiera de los pines del Arduino de modo que sea más fácil de reconocer o saber lo que está 
             conectado a él y por ende, facilitar y agilizar del desarrollo de cualquier algoritmo que necesite controlar 
-            dispositivos externos para que estos cumplan cualquier función.
+            dispositivos externos para que estos cumplan cualquier función específica.
         </p>
     </div>
     <div class="col-md-5" id="expimg">
         <img src="{% static 'Im/Computer.png' %}"/>
+    </div>
+</div>
+<div class="row mx-auto" id="content">
+    <div class="col-md-10" id="exp1">
+        <h2>Sintaxis</h2>
+        <hr/>
+        <p class="text-justify">
+            Para nombrar un pin como una variable, se deben tener en cuenta tres cosas. Primero se debe poner el tipo de 
+            dato que para este caso siempre será de tipo entero, es decir, se utiliza el comando <span style="color: rgb(200, 147, 0);">int</span>, 
+            pues esto está definido por Arduino; luego, se debe poner el nombre que va a tener dicha variable, y hay que 
+            recordar que en este caso el nombre comunmente coinside con el dispositivo el cuál está conectado a este pin, 
+            ya que de esta manera se hace más fácil reconocer el pin dentro del porgrama y así utilizarlo más facilmente. 
+            Por último, se le debe asignar un número de pin al cual se conectó el dispositipo que se desea utilizar, solo 
+            debe poner el signo de igual y posteriormente poner el número, finalizando con un punto y coma.
+        </p>
+        <div class="col-md-8 code mx-auto text-justify">
+            <pre>
+            <code class="language-c++">
+int nombre_del_pin = pin_conectado;
+            </code>
+            </pre>
+        </div>
     </div>
 </div>
 <hr/>
