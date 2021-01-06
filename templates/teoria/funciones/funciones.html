@@ -58,12 +58,12 @@
         <h2>Sintaxis</h2>
         <hr/>
         <p class="text-justify">
-            Para declarar una función se deben tener en cuenta tres cosas. Primero se debe poner el tipo de dato
-            el cual va a almacenar la variable, luego se debe poner el nombre que va a tener dicha variable, este 
-            nombre comunmente coinside con el dato el cual va a almacenar esta, pues de esta manera se facilita 
-            su uso; por último, aunque no se hace necesario, se le puede asignar un valor inicial a la variable, 
-            solo debe poner el signo de igual y posteriormente darle el valor que se desee, finalizando con un 
-            punto y coma.
+            Para declarar una función se deben tener en cuenta tres cosas. Primero se debe poner el tipo de función que se 
+            necesita puesto que dependiendo de esto es que se va a tener una o más salidas y también, de esto depende qué
+            tipo de salida. Luego se debe poner el nombre que va a tener dicha función, este nombre comunmente coinside con 
+            la acción o tarea que va a cumplir la función, pues de esta manera se facilita su uso; por último, aunque no 
+            se hace necesario ya que también existen funciones vacias, se deben poner los parámetros de entrada que va a 
+            tener la función para operar dentro de ella.
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
@@ -82,108 +82,98 @@ tipo_de_función nombre_función(parámetros de entrada){
         <h2>Tipos de funciones</h2>
         <hr/>
         <p class="text-justify">
-            Dentro de los tipos de funciones que existen en Arduino para las variables se encuentran los números,
-            las letras, las cadenas de texto, los booleanos y entre otro. Dentro de los números se encuentran 
-            los enteros, los flotantes y binarios. A continuación se explica un poco de cada tipo para tener 
+            Los tipos de funciones que existen en Arduino se dividen en tres principalmente, las de paso por valor, las 
+            de paso por referencia y por último, las de paso por puntero. Dentro de las funcione de paso por valor se 
+            encuentran las mismas que en los tipos de datos que se vieron en la sección de variables, luego se encuentran
+            las de paso por referencia en las que ya no se pasa una variable como tal sino su dirección en memoria. Por 
+            último, se tienen las de paso por puntero en las cuales . A continuación se explica un poco de cada tipo para tener 
             en cuenta cuál es el que se desea y se necesita utilizar para cada uno de los programas, además, se
             mostrará su sintaxis dentro del lenguaje.
         </p>
         <br>
-        <h5 class="text-justify">Enteros: </h5>
+        <h5 class="text-justify">Paso por valor: </h5>
         <p class="text-justify">
-            Los números enteros son aquellos que contienen a todos los números que hay en la recta real antes y después 
-            del cero, sin tener en cuenta los infinitos puntos que hay entre un número y el otro, además, son aquellos 
-            que no poseen decimales o fracción, es decir, son exactos. Para declarar una variable con este tipo de dato, 
-            se debe poner la palabra "<span style="color: rgb(200, 147, 0);">int</span>" seguida del nombre de la 
-            variable. 
+            Para las funciones de paso por valor cabe tener en cuenta que solo pueden retornar un valor y que este puede 
+            ser de cualquier tipo, para declarar el tipo de valor de la función que se desea trabajar, se puede tener en 
+            cuenta los tipos de dato que se vieron en la sección de variables. Una vez declarado el tipo de valor de la 
+            función, el cuál va a ser el mismo tipo del dato que retorne la función, se debe poner un nombre a la función 
+            el cual va a coincidir con la tarea o la acción que va a realizar dicha función, ya que esto permite que el 
+            programa sea más fácil de desarrollar y de entender. Luego, se van a poner los parámetros de entrada los cuales 
+            deben coincidir también con el tipo de dato de la función y por último, se ponen las intrucciones u operaciones 
+            que se desean realizar dentro de la función con los parámetros que se ingresaron a ella para luego retornar 
+            este resultado y usarlo en la función principal. Es de resaltar que en este tipo de función lo que se ingresa 
+            y se retorna son directamente los valores de las variables, importante siempre retornar el valor obtenido de 
+            la función, ya que es la única manera de sacarlo de la función.
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
             <code class="language-c++">
-int nombre_variable = valor;
+tipo_función nombre_función(tipo_variable nombre_variable){
+    Instrucciones;
+    return valor;
+}
+void setup(){
+
+}
+void loop(){
+    tipo_variable nombre_variable = valor;
+    nueva_variable = nombre_función(nombre_variable);
+}
             </code>
             </pre>
         </div>
         <br>
-        <h5 class="text-justify">Flotantes o doubles: </h5>
+        <h5 class="text-justify">Paso por referencia: </h5>
         <p class="text-justify">
-            Los números flotantes son aquellos que contienen los infinitos números que hay en la recta real antes y después 
-            del cero, además, son aquellos que poseen decimales o fracción, es decir, no son exactos y tienen números 
-            después del punto o de la coma. Para declarar una variable con este tipo de dato, se debe poner la palabra 
-            "<span style="color: rgb(200, 147, 0);">float</span>" seguida del nombre de la variable. Por otra parte, se 
-            encuentra los doubles que se definen teóricamente igual que el float, su diferencia es que este tipo de dato 
-            tiene más bits de almacenamiento, por lo que pueden ser muchos más los número que pueden guardarse después de 
-            la coma o el punto. Para declarar o nombrar este tipo de dato se debe poner la palabra  
-            "<span style="color: rgb(200, 147, 0);">float</span>"
+            Ahora, en las funciones de paso por referencia se tiene una estructura parecida a la de paso por valor, pues
+            primero se debe de poner el tipo de función que se va a trabajar y seguido de esto se debe poner el nombre de 
+            la función teniendo en cuenta las recomendaciones dadas en el anterior tipo de función. Posteriormente, se 
+            deben poner los parámetros de entrada como ya se sabe, la diferencia es que en este caso los parámetros de 
+            entrada no son valores de variables como tal, sino que es el acceso directamente al espacio en memoria de dicha 
+            variable o lo que hay guardado en dicho espacio, ya que de esta manera puede modificar la variable desde 
+            cualquier función o lugar del programa sin necesidad de almacenarla en otra como en el caso de paso por valor. 
+            Esta es la principal diferencia entre los dos tipos de función, la forma en la que se retornan los valores que 
+            se obtienen dentro de ella.
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
             <code class="language-c++">
-float nombre_variable = valor;
-            </code>
-            </pre>
-        </div>
-        <div class="col-md-8 code mx-auto text-justify">
-            <pre>
-            <code class="language-c++">
-double nombre_variable = valor;
-            </code>
-            </pre>
-        </div>
-        <br>
-        <h5 class="text-justify">Booleanos: </h5>
-        <p class="text-justify">
-            Los números booleanos son aquellos que contienen valores binarios, es decir, solo tienen dos posibilidades 
-            falso o verdades, alto o bajo o, 0 o 1. Estos valores usualmente se obtienen como resultado de expresiones 
-            lógicas que al ser evaluada, se obtiene como resultado alguno de estos valores. Para declarar un dato de este
-            tipo se debe poner la palabra "<span style="color: rgb(200, 147, 0);">boolt</span>" seguida del nombre de 
-            la variable.
-        </p>
-        <div class="col-md-8 code mx-auto text-justify">
-            <pre>
-            <code class="language-c++">
-bool nombre_variable = valor;
+tipo_función nombre_función(tipo_variable &nombre_variable){
+    Instrucciones;
+}
+void setup(){
+
+}
+void loop(){
+    tipo_variable nombre_variable = valor;
+    nombre_función(&nombre_variable);
+}
             </code>
             </pre>
         </div>
         <br>
-        <h5 class="text-justify">Letras: </h5>
+        <h5 class="text-justify">Paso por puntero: </h5>
         <p class="text-justify">
-            Las letras son un tipo de dato en el que sea puede almacenar, como su nombre lo indica, cualquier letra del 
-            alfabeto, sin importar si es mayúscula o minúscula, pero solo se puede almacenar una sola letra a la vez. Para 
-            declarar una variable con este tipo de dato, se debe poner la palabra "<span style="color: rgb(200, 147, 0);">float</span>" 
-            seguida del nombre de la variable.
+            Para finalizar, en el caso de paso por puntero se debe declarar el tipo de función que para esta siempre va a 
+            ser de tipo vacio, es decir, utilizando el comando <span style="color: rgb(200, 147, 0);">void</span>. Luego,
+            se debe poner el nombre de la función como usualmente se hace y por último, se deben poner los parámetros de 
+            entrada de la función, de igual manera que en la función anterior, estos parámetros cambian con respecto a las
+            demás funciones. En este caso los parámetros de entrada son punteros que apuntan directamente al espacio en 
+            memoria, lo que permite realizar cualquier operación sobre ella y de esta manera la función hacerse más útil.
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
             <code class="language-c++">
-char nombre_variable = "valor";
-            </code>
-            </pre>
-        </div>
-        <p class="text-justify">
-            Para este problema, existe una variación en la cual se pueden guardar letras o frases completas y para esto se
-            declara como vector. Para declarar un vector con este tipo de dato, se debe poner la palabra 
-            "<span style="color: rgb(200, 147, 0);">float</span>" seguida del nombre del vector.
-        </p>
-        <div class="col-md-8 code mx-auto text-justify">
-            <pre>
-            <code class="language-c++">
-char[tamaño] nombre_vector = "valor";
-            </code>
-            </pre>
-        </div>
-        <br>
-        <h5 class="text-justify">Cadenas de texto: </h5>
-        <p class="text-justify">
-            Los string son tipos de datos que permiten almacernar palabras que no contengan caracteres especiales. Para 
-            declarar una variable con este tipo de dato, se debe poner la palabra "<span style="color: rgb(200, 147, 0);">float</span>" 
-            seguida del nombre de la variable.
-        </p>
-        <div class="col-md-8 code mx-auto text-justify">
-            <pre>
-            <code class="language-c++">
-string nombre_variable = valor;
+void nombre_función(tipo_puntuero *nombre_puntero){
+    Instrucciones;
+}
+void setup(){
+
+}
+void loop(){
+    tipo_variable nombre_variable = valor;
+    nombre_función(&nombre_variable);
+}
             </code>
             </pre>
         </div>
@@ -201,19 +191,19 @@ string nombre_variable = valor;
                         <h2>Ejemplo #1</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo1' %}" class="button">Empezar</a>
+                        <a href="{% url 'funciones_app:ejemplo1' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #2</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo2' %}" class="button">Empezar</a>
+                        <a href="{% url 'funciones_app:ejemplo2' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #3</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo3' %}" class="button">Empezar</a>
+                        <a href="{% url 'funciones_app:ejemplo3' %}" class="button">Empezar</a>
                     </div>
                 </div>
               </div>
@@ -223,19 +213,19 @@ string nombre_variable = valor;
                         <h2>Ejemplo #4</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo4' %}" class="button">Empezar</a>
+                        <a href="{% url 'funciones_app:ejemplo4' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #5</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo5' %}" class="button">Empezar</a>
+                        <a href="{% url 'funciones_app:ejemplo5' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #6</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo6' %}" class="button">Empezar</a>
+                        <a href="{% url 'funciones_app:ejemplo6' %}" class="button">Empezar</a>
                     </div>
                 </div>
               </div>
