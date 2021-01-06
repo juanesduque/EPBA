@@ -41,7 +41,17 @@
         <h2>¿Qué es?</h2>
         <hr/>
         <p class="text-justify">
-            El PWM, de las siglas en inglés Pulse Width Modulation, es modulación por ancho de pulsos y se refiere a  
+            El PWM, de las siglas en inglés Pulse Width Modulation, es modulación por ancho de pulsos de una señal y se 
+            refiere a una técnica que lo que hace es modificar el ciclo de trabajo de una señal periódica, en este caso 
+            una señal cuadrada por tratarse de un Arduino, para controlar la cantidad de energía que se envía a una carga.
+            Lo que Arduino pretende con esto es poder variar la energía que se envía a través de algunos de sus pines para
+            por ejemplo cambiar la intensidad de luz en un led o controlar la velocidad de un motor, los pines que pueden 
+            realizar esta variación o que tienen PWM, se identifican con el símbolo ~ al lado del número del pin. Gracias 
+            a esto es que Arduino es una gran herramienta y un sistema embebido muy útil a la hora de interactuar con el 
+            exterior, por lo que es muy usado para aplicaciones como robótica o automatización. En Arduino el valor del 
+            PWM puede variar entre 0 y 255, valores los cuales se deben de tener en cuenta a la hora de configurar o enviar 
+            señales a los diferentes positivos conectados a este, ya que dependiendo del valor van a funcionar de una u 
+            otra manera.
         </p>
     </div>
     <div class="col-md-5" id="expimg">
@@ -53,12 +63,16 @@
         <h2>Sintaxis</h2>
         <hr/>
         <p class="text-justify">
-            Para esto solo de
+            Esta función de PWM solo la tienen algunos pines digitales del Arduino y por ende se dijo que la señal era 
+            cuadrada. Como se sabe que los pines que tienen esta función son digitales se debe utilizar siempre el comando
+            digitalWrite(), donde sus parámetros de entrada, es decir, lo que está dentro de los paréntesis son: primero
+            el nombre de la variable que almacena el pin o el pin directamente al que está conectado el dispostivo que se
+            quiere controlar; Y segundo, se debe poner el valor del PWM que cabe recordar debe estar entre 0 y 255.
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
             <code class="language-c++">
-int nombre_del_pin = pin_conectado;
+digitalWrite(pin, valor_PWM);
             </code>
             </pre>
         </div>
@@ -76,19 +90,19 @@ int nombre_del_pin = pin_conectado;
                         <h2>Ejemplo #1</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo1' %}" class="button">Empezar</a>
+                        <a href="{% url 'pwm_app:ejemplo1' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #2</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo2' %}" class="button">Empezar</a>
+                        <a href="{% url 'pwm_app:ejemplo2' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #3</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo3' %}" class="button">Empezar</a>
+                        <a href="{% url 'pwm_app:ejemplo3' %}" class="button">Empezar</a>
                     </div>
                 </div>
               </div>
@@ -98,19 +112,19 @@ int nombre_del_pin = pin_conectado;
                         <h2>Ejemplo #4</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo4' %}" class="button">Empezar</a>
+                        <a href="{% url 'pwm_app:ejemplo4' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #5</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo5' %}" class="button">Empezar</a>
+                        <a href="{% url 'pwm_app:ejemplo5' %}" class="button">Empezar</a>
                     </div>
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #6</h2><br>
                         <img src="{% static 'Im/Computer.png' %}" alt="" />
                         <br><br>
-                        <a href="{% url 'operadores_app:ejemplo6' %}" class="button">Empezar</a>
+                        <a href="{% url 'pwm_app:ejemplo6' %}" class="button">Empezar</a>
                     </div>
                 </div>
               </div>
