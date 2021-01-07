@@ -41,7 +41,18 @@
         <h2>¿Qué son?</h2>
         <hr/>
         <p class="text-justify">
-            
+            Como bien se sabe, en cualquier lenguaje de programación las clases son un concepto difícil de entender, ya 
+            que es un concepto no tangible y muy abstracto. Una forma de definir las clases es que son una herramienta que
+            se utiliza en la programación para representar o describir entidades o conceptos del mundo real. Cada clase lo
+            que pretende es crear un objeto al cual se le definen un conjunto de atributos, variables y métodos apropiados
+            para operarse a sí misma con dichos atributos y varibles. Gracias a esto nace la programación orientada a 
+            objetos la cual es la base principal para crear todos los tipos de objetos o clases, puesto que como ya se 
+            mencionó permite abstraer los datos y las operaciones asociadas como si fuesen una caja negra. Por esta razón,
+            una clase se convierte en una herremienta muy potente para Arduino puesto que permitiría modelar con más
+            facilidad y con mejor técnica algún objeto o elemento que se esté analizando y manejando en el entorno físico. 
+            Hay que tener en cuenta que en las clases hay propiedades y métodos que son públicos y otros privados, pues por 
+            definición se saben que los públicos pueden ser vistos y modificados por el usuario, mientras que los privados
+            están ocultos. 
         </p>
     </div>
     <div class="col-md-5" id="expimg">
@@ -53,19 +64,31 @@
         <h2>Sintaxis</h2>
         <hr/>
         <p class="text-justify">
-            
+            Para definir una clase es muy simple, primero se debe poner el comando <span style="color: rgb(200, 147, 0);">class</span>,
+            seguido el nombre de la clase el cual normalmente hace referencia al objeto que se está modelando, posterior a 
+            esto se abren y cierran las llaves, finalizando con un punto y coma. Ahora, dentro de las llaves se debe 
+            poner las sección de <span style="color: rgb(200, 147, 0);">private</span>, en donde, como ya se había 
+            mencionado, van a ir todos los métodos y propiedades ocultos de la clase. Por último, se debe poner la sección
+            de <span style="color: rgb(200, 147, 0);">public</span>, en donde también van los métodos y propiedades, pero
+            en este caso son visibles y se pueden modificar.
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
             <code class="language-c++">
-int nombre_del_pin = pin_conectado;
+class nombre_clase{
+    private:
+        Instrucciones;
+    
+    public:
+        Instrucciones;
+};
             </code>
             </pre>
         </div>
     </div>
 </div>
 <hr/>
-<div class="row mx-auto" id="content">
+<div class="row mx-auto" id="ejemplos">
     <div class="col-lg-12">
         <h1 class="text-center">Ejemplos</h1><hr/>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
