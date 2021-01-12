@@ -143,9 +143,149 @@ bool estado = (20>=10);
 <hr/>
 <div class="row mx-auto" id="content">
     <div class="col-md-10" id="exp1">
-        <h2>Tabla de operadores</h2>
-        <hr/>
-        
+        <h2>Tablas de operadores</h2>
+        <hr/><br>
+        <table class="table mt-3">
+            <thead class="text-center">
+                <tr style="background-color: #0f8f94; color: black;">
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Operador Abreviado</th>
+                    <th scope="col">Significado</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td class="font-weight-bold">Asignación</td>
+                    <td>x = y</td>
+                    <td>x = y</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Asignación de adición</td>
+                    <td>x += y</td>
+                    <td>x = x + y</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Asignación de resta</td>
+                    <td>x -= y</td>
+                    <td>x = x - y</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Asignación de multiplicación</td>
+                    <td>x *= y</td>
+                    <td>x = x * y</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Asignación de división</td>
+                    <td>x /= y</td>
+                    <td>x = x / y</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Asignación de residuo</td>
+                    <td>x %= y</td>
+                    <td>x = x % y</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table mt-3">
+            <thead>
+                <tr style="background-color: #0f8f94; color: black;">
+                    <th scope="col">Operador</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-bold">Igual (==)</td>
+                    <td class="text-left">Devuelve true si los operandos son iguales.</td>
+                    <td>3 == var1</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Diferente (!=)</td>
+                    <td class="text-left">Devuelve true si los operandos son diferentes.</td>
+                    <td>var1 != 4</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Mayor que (>)</td>
+                    <td class="text-left">Devuelve true si el operando izquierdo es mayor que el operando derecho.
+                    </td>
+                    <td>var2 > var1</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Mayor o igual que (>=)</td>
+                    <td class="text-left">Devuelve true si el operando izquierdo es mayor o igual que el operando derecho.</td>
+                    <td>var2 >= var1</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Menor que (<)</td>
+                    <td class="text-left">Devuelve true si el operando izquierdo es menor que el operando derecho.
+                    </td>
+                    <td>var1 < var2</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Menor o igual que (<=)</td>
+                    <td class="text-left">Devuelve true si el operando izquierdo es menor o igual que el operando
+                        derecho.</td>
+                    <td>var1 <= var2</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table mt-3">
+            <thead>
+                <tr style="background-color: #0f8f94; color: black;">
+                    <th scope="col">Operador</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-bold">Residuo (%)</td>
+                    <td class="text-left">Operador binario. Devuelve el resto entero de dividir los dos operandos.</td>
+                    <td>12 % 5 devuelve 2</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Negación unaria (-)</td>
+                    <td class="text-left">Operador unario. Devuelve la negación de su operando.</td>
+                    <td>Si x es 3, entonces -x devuelve -3.</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">Positivo unario (+)</td>
+                    <td class="text-left">Operador unario. Intenta convertir el operando en un número, si aún no lo es.</td>
+                    <td>+"3" devuelve 3.
+                        +true devuelve 1.</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table mt-3">
+            <thead>
+                <tr style="background-color: #0f8f94; color: black;">
+                    <th scope="col">Operador</th>
+                    <th scope="col">Uso</th>
+                    <th scope="col">Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-bold">AND Lógico (&&)</td>
+                    <td>expr1 && expr2</td>
+                    <td class="text-justify">Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false.</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">OR lógico (||)</td>
+                    <td>expr1 || expr2</td>
+                    <td class="text-justify">Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">NOT lógico (!)</td>
+                    <td>!expr</td>
+                    <td class="text-justify">Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 <hr/>

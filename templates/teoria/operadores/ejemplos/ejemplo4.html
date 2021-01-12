@@ -2,11 +2,9 @@
 
 {% load static %}
 
-
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/ejemplos.css' %}" type="text/css" media="all">
 {% endblock styles %}
-
 
 {% block headers %}
 <div id="header-wrapper">
@@ -14,7 +12,8 @@
         <div id="logo">
             <h1>
                 <a href="{% url 'main_app:main' %}">Arduino</a>
-                <img src="{% static 'Im/arduino.png' %}" alt="">
+                <img src="{% static 'Im/arduino.png' %}">
+                <img src="{% static 'Im/UTP.png' %}" style="width:8%;">
             </h1>
         </div>
         <div id="menu">
@@ -22,7 +21,7 @@
                 <li><a href="{% url 'main_app:main' %}" accesskey="1">Inicio</a></li>
 				<li><a href="/#page-wrapper" accesskey="2">Proyectos</a></li>
                 <li><a href="/#page-wrapper1" accesskey="3">Teoria</a></li>
-                <li><a href="{% url 'operadores_app:operadores' %}" accesskey="4">Volver</a></li>
+                <li><a href="/operadores#ejemplos" accesskey="4">Volver</a></li>
             </ul>
         </div>
     </div>
@@ -34,7 +33,7 @@
 <div class="row mx-auto content" id="enunciado">
     <div class="row mx-auto">
         <div class="col-md-12 text-center">
-            <h1 style="padding-bottom: 1em;">Ejemplo #1</h1>
+            <h1 style="padding-bottom: 1em;">Ejemplo #4</h1>
             <div class="col-md-5" id="mod">
                 <h3>Enunciado</h3><br>
                 <p>
