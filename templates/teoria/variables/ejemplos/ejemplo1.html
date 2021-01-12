@@ -2,11 +2,9 @@
 
 {% load static %}
 
-
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/ejemplos.css' %}" type="text/css" media="all">
 {% endblock styles %}
-
 
 {% block headers %}
 <div id="header-wrapper">
@@ -15,6 +13,7 @@
             <h1>
                 <a href="{% url 'main_app:main' %}">Arduino</a>
                 <img src="{% static 'Im/arduino.png' %}">
+                <img src="{% static 'Im/UTP.png' %}" style="width:8%;">
             </h1>
         </div>
         <div id="menu">
@@ -90,12 +89,12 @@
 <span><span class="pr-n mr-3" style="color: blue;">1</span>Declaramos una variable llamada número de tipo entero.</span>
 <span><span class="pr-n mr-3" style="color: blue;">2</span>Se inicia la función de configuración.</span>
 <span><span class="pr-n mr-3" style="color: blue;">3</span>Se comienza la comunicación serial.</span>
-<span><span class="pr-n mr-3" style="color: blue;">4</span>Ahora, se cierra la función de condiguración.</span>
-<span><span class="pr-n mr-3" style="color: blue;">5</span>Luego se abre la función del ciclo infinito.</span>
+<span><span class="pr-n mr-3" style="color: blue;">4</span>Ahora, se finaliza la función de condiguración.</span>
+<span><span class="pr-n mr-3" style="color: blue;">5</span>Luego se inicializa la función del ciclo infinito.</span>
 <span><span class="pr-n mr-3" style="color: blue;">6</span>Se almacena la lectura de lo que se ingresa por teclado en la variable número.</span>
 <span><span class="pr-n mr-3" style="color: blue;">7</span>Luego, se imprime un mensaje.</span>
 <span><span class="pr-n mr-3" style="color: blue;">8</span>Posteriormente se imprime el valor almacenado en la variable.</span>
-<span><span class="pr-n mr-3" style="color: blue;">9</span>Por último, se cierra la función del ciclo infinito.</span>
+<span><span class="pr-n mr-3" style="color: blue;">9</span>Por último, se termina la función del ciclo infinito.</span>
         </code>
       </pre>
     </div>

@@ -2,11 +2,9 @@
 
 {% load static %}
 
-
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/teoria.css' %}" type="text/css" media="all">
 {% endblock styles %}
-
 
 {% block headers %}
 <div id="header-wrapper">
@@ -14,7 +12,8 @@
 		<div id="logo">
             <h1>
                 <a href="{% url 'main_app:main' %}">Arduino</a>
-                <img src="{% static 'Im/arduino.png' %}" alt="">
+                <img src="{% static 'Im/arduino.png' %}">
+                <img src="{% static 'Im/UTP.png' %}" style="width:8%;">
             </h1>
         </div>
 		<div id="menu">
@@ -41,14 +40,14 @@
         <h2>¿Qué son?</h2>
         <hr/>
         <p class="text-justify">
-            Los operadores son un tipo de símbolo o caracter que pueden aparecer en las expresiones u operaciones, estos 
+            Los operadores son un tipo de símbolo o carácter que pueden aparecer en las expresiones u operaciones, estos 
             indican al programa la realización de determinadas operaciones lógicas o matemáticas. Se pueden aplicar a 
             variables u otros objetos denominados operandos los cuales luego de ser operadas van a arrojar valores ya sea 
             de tipo numérico o booleano, dependiendo cuál sea el caso.
         </p>
     </div>
     <div class="col-md-5" id="expimg">
-        <img src="{% static 'Im/Computer.png' %}"/>
+        <img src="{% static 'Im/operadores.png' %}" style="width: 60%;"/>
     </div>
 </div>
 <hr/>
@@ -79,8 +78,8 @@
         <hr/>
         <p class="text-justify">
             Los operadores relacionales son los que permiten asignar o dar un valor o valores específicos a una variable 
-            para de esta manera hacer saber al programa el valor de la variable y posteriormente operar con ella o 
-            compararla con otras variables. 
+            para de esta manera hacer saber al programa el valor de esta y posteriormente operar con ella o compararla con 
+            otras variables. 
         </p>
     </div>
 </div>
@@ -92,8 +91,8 @@
         <p class="text-justify">
             Para cada operador puede cambiar un poco la sintaxis, por lo que se mostrarán los casos que se pueden presentar 
             en un programa y de esta manera dejar claridad en el alumno de cómo se deben usar y en qué casos. Para empezar, 
-            se tienen los operadores aritméticos, estos se dividen en dos, los unidireccionales y los bidireccionales. 
-            Los unidireccionales son aquellos que tienen operando a su lado derecho y se usan para dar un sentido a los 
+            se tienen los operadores aritméticos, estos se dividen en dos, los <i>unidireccionales</i> y los <i>bidireccionales</i>. 
+            Los <i>unidireccionales</i> son aquellos que tienen operando a su lado derecho y se usan para dar un sentido a los 
             valores, a continuación se muestra cómo:
         </p>
         <div class="col-md-8 code mx-auto text-justify">
@@ -105,7 +104,7 @@ int dato = +18;
             </pre>
         </div>
         <p class="text-justify">
-            Por otra parte, los bidireccionales son los que tienen operandos a cada lado y son estos los que permiten 
+            Por otra parte, los <i>bidireccionales</i> son los que tienen operandos a cada lado y son estos los que permiten 
             realizar operacionas matemáticas tales como la suma, resta, multiplicación y división, en este caso, en la 
             variable se guarda el resultado de la operación que se realice, en el siguiente fragmento se muestra:
         </p>
@@ -128,9 +127,9 @@ int numero = 20;
             </pre>
         </div>
         <p class="text-justify">
-            Por último, se tienen los operadores lógicos, estos son únicamente bidireccionales, es decir, tiene un operando 
-            a cada lado y de esta manera evalua si una expresión es falsa o verdadera. En el siguiente fragmento se muestra 
-            cómo:
+            Por último, se tienen los operadores lógicos, estos son únicamente <i>bidireccionales</i>, es decir, tiene un 
+            operando a cada lado y de esta manera evalua si una expresión es falsa o verdadera. En el siguiente fragmento 
+            se muestra cómo:
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
@@ -139,6 +138,14 @@ bool estado = (20>=10);
             </code>
             </pre>
         </div>
+    </div>
+</div>
+<hr/>
+<div class="row mx-auto" id="content">
+    <div class="col-md-10" id="exp1">
+        <h2>Tabla de operadores</h2>
+        <hr/>
+        
     </div>
 </div>
 <hr/>

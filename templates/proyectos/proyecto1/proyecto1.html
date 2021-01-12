@@ -13,6 +13,7 @@
             <h1>
                 <a href="{% url 'main_app:main' %}">Arduino</a>
                 <img src="{% static 'Im/arduino.png' %}">
+                <img src="{% static 'Im/UTP.png' %}" style="width:8%;">
             </h1>
         </div>
         <div id="menu">
@@ -42,12 +43,13 @@
             En una finca se montó un sistema de riego automático el cual permite al agricultor tener un mejor y más eficiente
             control del cultivo teniendo grandes ventajas como el ahorro de recursos tanto hídricos como económicos, además 
             de que se tiene un cultivo más productivo y de mejor calidad. Este sistemas funciona de forma automática, en 
-            donde se tienen unos límites de alguno parámetros que se miden como temperatura, humedad, ph, entre otros; y a 
+            donde se tienen unos límites de algunos parámetros que se miden como temperatura, humedad, ph, entre otros; y a 
             través de estos se activan y se desactivan los diferentes equipos que ayudan a controlar todas estas variables. 
             Por otra parte, se puede manejar manualmente encendiendo y apagando switchs, pero para esto es necesario que el 
             agricultor tenga la posibilidad de ver el valor de estos parámetros y así determinar cuando encender o apagar 
             un switch, por esta razón, se pide desarrollar un programa que permita al usuario observar en el monitor serial 
-            el valor de los parámetros ya almacenados para así poder tomar la decisión.
+            el valor de los parámetros ya almacenados para así poder tomar la decisión de encender o apagar el sistema de 
+            forma manual.
         </p>
         <h4 class="text-justify">Cosas para tener en cuenta: </h4>
         <p class="text-justify"> 
