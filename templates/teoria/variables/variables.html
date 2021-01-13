@@ -198,7 +198,7 @@ string nombre_variable = "palabra";
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #1</h2><br>
                         <div class="mx-auto">
-                            <img src="{% static 'Im/variables-ejemplo1.png' %}"/>
+                            <img src="{% static 'Im/variables-ejemplo1.png' %}" style="width: 100%;"/>
                         </div>
                         <br><br>
                         <a href="{% url 'variables_app:ejemplo1' %}" class="button">Empezar</a>
@@ -206,7 +206,7 @@ string nombre_variable = "palabra";
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #2</h2><br>
                         <div class="mx-auto">
-                            <img src="{% static 'Im/variables-ejemplo2.png' %}"/>
+                            <img src="{% static 'Im/variables-ejemplo2.png' %}" style="width: 100%;"/>
                         </div>
                         <br><br>
                         <a href="{% url 'variables_app:ejemplo2' %}" class="button">Empezar</a>
@@ -214,14 +214,50 @@ string nombre_variable = "palabra";
                     <div class="col-md-3" id="mod">
                         <h2>Ejemplo #3</h2><br>
                         <div class="mx-auto">
-                            <img src="{% static 'Im/variables-ejemplo3.png' %}"/>
+                            <img src="{% static 'Im/variables-ejemplo3.png' %}" style="width: 97%;"/>
                         </div>
                         <br><br>
                         <a href="{% url 'variables_app:ejemplo3' %}" class="button">Empezar</a>
                     </div>
                 </div>
               </div>
+              <div class="carousel-item">            
+                <div class="row" style="margin-left: 75px;">
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #4</h2><br>
+                        <div class="mx-auto">
+                            <img src="{% static 'Im/variables-ejemplo4.png' %}" style="width: 100%;"/>
+                        </div>
+                        <br><br>
+                        <a href="{% url 'variables_app:ejemplo4' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #5</h2><br>
+                        <div class="mx-auto">
+                            <img src="{% static 'Im/variables-ejemplo5.png' %}" style="width: 100%;"/>
+                        </div>
+                        <br><br>
+                        <a href="{% url 'variables_app:ejemplo5' %}" class="button">Empezar</a>
+                    </div>
+                    <div class="col-md-3" id="mod">
+                        <h2>Ejemplo #6</h2><br>
+                        <div class="mx-auto">
+                            <img src="{% static 'Im/variables-ejemplo6.png' %}" style="width: 97%;"/>
+                        </div>
+                        <br><br>
+                        <a href="{% url 'variables_app:ejemplo6' %}" class="button">Empezar</a>
+                    </div>
+                </div>
+              </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" id="ant">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" id="sig">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
           </div>
     </div>
 </div>
