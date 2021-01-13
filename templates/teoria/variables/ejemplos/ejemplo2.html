@@ -19,7 +19,7 @@
         <div id="menu">
             <ul>
                 <li><a href="{% url 'main_app:main' %}" accesskey="1">Inicio</a></li>
-				<li><a href="/#page-wrapper" accesskey="2">Proyectos</a></li>
+                <li><a href="/#page-wrapper" accesskey="2">Proyectos</a></li>
                 <li><a href="/#page-wrapper1" accesskey="3">Teoria</a></li>
                 <li><a href="/variables#ejemplos" accesskey="4">Volver</a></li>
             </ul>
@@ -35,9 +35,10 @@
         <div class="col-md-12 text-center">
             <h1 style="padding-bottom: 1em;">Ejemplo #2</h1>
             <div class="col-md-5" id="mod">
-                <h3>Enunciado</h3><hr/>
+                <h3>Enunciado</h3>
+                <hr />
                 <p>
-                    Para empezar con Arduino, se pide realizar un programa en el que el usuario ingrese una 
+                    Para empezar con Arduino, se pide realizar un programa en el que el usuario ingrese una
                     palabra a través del teclado y posteriormente este sea mostrado en pantalla.
                 </p>
                 <a href="#" id="empezar" class="button">Empezar</a>
@@ -48,7 +49,8 @@
 <!-- Código -->
 <div class="row mx-auto content desactivate" id="content">
     <div class="col-md-5 mx-auto mod1" id="mod1">
-        <h3>Solución</h3><hr/>
+        <h3>Solución</h3>
+        <hr />
         <div class="text-justify mt-2">
             <pre>
                   <code class="language-c++">
@@ -83,8 +85,9 @@
     </div>
     <!-- Explicación -->
     <div class="col-md-5 mx-auto mod1 desactivate" id="expli">
-        <h3>Explicación</h3><hr/>
-      <pre>
+        <h3>Explicación</h3>
+        <hr />
+        <pre>
         <code class="language-c++ text-justify">
 <span><span class="pr-n mr-3" style="color: blue;">1</span>Declaramos una variable llamada palabra de tipo string.</span>
 <span><span class="pr-n mr-3" style="color: blue;">2</span>Se inicia la función de configuración.</span>
@@ -124,17 +127,27 @@
     document.getElementById('siguiente_').addEventListener('click', () => {
         var id_select = 'val' + cont,
             valor_entrada = document.getElementById(id_select).value
-        cont++
-        valores.push(valor_entrada)
 
-        if (cont == num_entradas) {
-            document.getElementById('entradas').className = 'desactivate'
-            document.getElementById('siguiente_').className = 'desactivate'
-            document.getElementById('reiniciar_').className = 'button'
-            document.getElementById('salida').className = ''
-            document.getElementById('resultado').innerHTML = valores[0]
-            document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+        if (isNaN(valor_entrada)) {
+            cont++
+            valores.push(valor_entrada)
+
+            if (cont == num_entradas) {
+                document.getElementById('entradas').className = 'desactivate'
+                document.getElementById('siguiente_').className = 'desactivate'
+                document.getElementById('reiniciar_').className = 'button'
+                document.getElementById('salida').className = ''
+                document.getElementById('resultado').innerHTML = valores[0]
+                document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+            }
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Dato no valido',
+                text: 'Ingrese un dato númerico!',
+            })
         }
+
     })
 
     document.getElementById('reiniciar_').addEventListener('click', () => {

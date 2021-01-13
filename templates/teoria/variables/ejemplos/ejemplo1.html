@@ -124,17 +124,26 @@
     document.getElementById('siguiente_').addEventListener('click', () => {
         var id_select = 'val' + cont,
             valor_entrada = parseInt(document.getElementById(id_select).value)
-        cont++
-        valores.push(valor_entrada)
+        if(!isNaN(valor_entrada)){
+            cont++
+            valores.push(valor_entrada)
 
-        if (cont == num_entradas) {
-            document.getElementById('entradas').className = 'desactivate'
-            document.getElementById('siguiente_').className = 'desactivate'
-            document.getElementById('reiniciar_').className = 'button'
-            document.getElementById('salida').className = ''
-            document.getElementById('resultado').innerHTML = valores[0]
-            document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+            if (cont == num_entradas) {
+                document.getElementById('entradas').className = 'desactivate'
+                document.getElementById('siguiente_').className = 'desactivate'
+                document.getElementById('reiniciar_').className = 'button'
+                document.getElementById('salida').className = ''
+                document.getElementById('resultado').innerHTML = valores[0]
+                document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+            }
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Dato no valido',
+                text: 'Ingrese un dato númerico!',
+            })
         }
+        
     })
 
     document.getElementById('reiniciar_').addEventListener('click', () => {
