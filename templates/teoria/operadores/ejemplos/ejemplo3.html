@@ -58,14 +58,14 @@
 <span id="2"><span class="pr-n mr-3" style="color: blue;"> 2</span>int numero2;</span>
 <span id="3"><span class="pr-n mr-3" style="color: blue;"> 3</span>int promedio;</span>
 <span id="4"><span class="pr-n mr-3" style="color: blue;"> 4</span>void setup(){</span>
-<span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>Serial.begin(9600);</span>
+<span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>    Serial.begin(9600);</span>
 <span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>}</span>
 <span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>void loop(){</span>
-<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>numero1 = Serial.read();</span>
-<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>numero2 = Serial.read();</span>
-<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>promedio = (numero1+numero2)/2;</span>
-<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>Serial.print("El resultado es: ");</span>
-<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>Serial.println(promedio);</span>
+<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>    numero1 = Serial.read();</span>
+<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>    numero2 = Serial.read();</span>
+<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>    promedio = (numero1+numero2)/2;</span>
+<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>    Serial.print("El resultado es: ");</span>
+<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>    Serial.println(promedio);</span>
 <span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>}</span>
                   </code>
                 </pre>
@@ -143,7 +143,6 @@
 
         if (!isNaN(valor_entrada)) {
             cont++
-            //valor_entrada = Math.pow(2,valor_entrada)
             valores.push(valor_entrada)
 
             if (cont == num_entradas) {
