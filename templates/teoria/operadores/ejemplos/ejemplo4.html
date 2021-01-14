@@ -60,23 +60,25 @@
 <span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>    Serial.begin(9600);</span>
 <span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>}</span>
 <span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>void loop(){</span>
-<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>    edad1 = Serial.read();</span>
-<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>    edad2 = Serial.read();</span>
-<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>    suma = (edad1*2)+(edad2*2);</span>
-<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>    Serial.print("El resultado es: ");</span>
-<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>    Serial.println(suma);</span>
-<span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>}</span>
+<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>    Serial.print("Ingrese una edad");</span>
+<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>    edad1 = Serial.read();</span>
+<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>    Serial.print("Ingrese otra edad");</span>
+<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>    edad2 = Serial.read();</span>
+<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>    suma = (edad1*2)+(edad2*2);</span>
+<span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>    Serial.print("El resultado es: ");</span>
+<span id="14"><span class="pr-n mr-3" style="color: blue;">14</span>    Serial.println(suma);</span>
+<span id="15"><span class="pr-n mr-3" style="color: blue;">15</span>}</span>
                   </code>
                 </pre>
         </div>
         <div id="entradas" class="desactivate">
             <div class="form-group" id="contval0">
                 <input type="text" clase="form-control" id="val0" style="width: 80%; border-color: rgb(220, 220, 220);"
-                    placeholder="Ingrese un numero">
+                    placeholder="Ingrese una edad">
             </div>
             <div class="form-group desactivate" id="contval1">
                 <input type="text" clase="form-control" id="val1" style="width: 80%; border-color: rgb(220, 220, 220);"
-                    placeholder="Ingrese otro numero">
+                    placeholder="Ingrese otra edad">
             </div>
         </div>
         <div id="salida" class="desactivate">
@@ -103,12 +105,14 @@
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Luego, se finzaliza la función de configuración.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Una vez abierto, se guarda el valor ingresado por teclado en la variable correspondiente a la primera edad.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Se guarda el valor ingresado por teclado en la variable correspondiente a la segunda edad.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Ahora se multiplica cada una de las edades por dos y se suma el resultado de ambas multiplicaciones.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se imprime un mensaje previo el cual acompaña el resultado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Se imprime el resultado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se termina la función de ciclo infinito.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se imprime un mensaje en el que se pide al usuario la primera edad.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Se guarda el valor ingresado por teclado en la variable correspondiente a la primera edad.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se imprime un mensaje en el que se pide al usuario la segunda edad.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se guarda el valor ingresado por teclado en la variable correspondiente a la segunda edad.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Ahora se multiplica cada una de las edades por dos y se suma el resultado de ambas multiplicaciones.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se imprime un mensaje previo el cual acompaña el resultado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">14</span>Se imprime el resultado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">15</span>Se termina la función de ciclo infinito.</span>
         </code>
       </pre>
     </div>

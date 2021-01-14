@@ -59,18 +59,19 @@
 <span id="4"><span class="pr-n mr-3" style="color: blue;"> 4</span>    Serial.begin(9600);</span>
 <span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>}</span>
 <span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>void loop(){</span>
-<span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>    numero = Serial.read();</span>
-<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>    doble = numero*2;</span>
-<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>    Serial.print("El doble del número es: ");</span>
-<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>    Serial.println(doble);</span>
-<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>}</span>
+<span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>    Serial.print("Ingrese un número");</span>
+<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>    numero = Serial.read();</span>
+<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>    doble = numero*2;</span>
+<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>    Serial.print("El doble del número es: ");</span>
+<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>    Serial.println(doble);</span>
+<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>}</span>
                   </code>
                 </pre>
         </div>
         <div id="entradas" class="desactivate">
             <div class="form-group">
                 <input type="text" clase="form-control" id="val0" style="width: 80%; border-color: rgb(220, 220, 220);"
-                    placeholder="Ingrese un numero">
+                    placeholder="Ingrese un número">
             </div>
         </div>
         <div id="salida" class="desactivate">
@@ -96,11 +97,12 @@
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Luego, se finaliza la función de configuración.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Una vez abierto, se guarda el valor ingresado por teclado en la variable correspondiente.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Ahora se multiplica dicho número por 2 y se guarda en la variable correspondiente.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Se imprime un mensaje previo el cual acompaña el resultado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se imprime el resultado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se termina la función de ciclo infinito.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Se imprime un mensaje en el que se pide el número al usuario.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se guarda el valor ingresado por teclado en la variable correspondiente.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Ahora se multiplica dicho número por 2 y se guarda en la variable correspondiente.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se imprime un mensaje previo el cual acompaña el resultado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se imprime el resultado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Se termina la función de ciclo infinito.</span>
         </code>
       </pre>
     </div>

@@ -40,7 +40,7 @@
                     En un parque de diversiones se desea implementar un programa que le permita al operador determinar si 
                     una persona es apta para poder entrar a una atracción. Para saber si una persona es apta, se debe tomar 
                     en cuenta la edad y la estatura, si su edad esta en un rango de 13 a 60 años y su estatura es mayor a 
-                    160 centímetros, el usuario podrá ingresar a la atracción, sino es así el programa se detiene.
+                    160 centímetros, el usuario podrá ingresar a la atracción, sino es así el programa se detiene.<br><br>
                     <strong>NOTA:</strong> La edad se debe recibir sin el punto, es decir si mide 1.70m lo recibe como 170cm.
                 </p>
                 <a href="#" id="empezar" class="button">Empezar</a>
@@ -56,27 +56,36 @@
         <div class="text-justify mt-2">
             <pre>
                   <code class="language-c++">
-<span id="1"><span class="pr-n mr-3" style="color: blue;"> 1</span>int dinero;</span>                    
-<span id="2"><span class="pr-n mr-3" style="color: blue;"> 2</span>int cambio;</span>
-<span id="3"><span class="pr-n mr-3" style="color: blue;"> 3</span>void setup(){</span>
-<span id="4"><span class="pr-n mr-3" style="color: blue;"> 4</span>    Serial.begin(9600);</span>
-<span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>}</span>
-<span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>void loop(){</span>
-<span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>    dinero = Serial.read();</span>
-<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>    if(dinero >= 10){</span>
-<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>        Serial.print("El helado fue vendido.");</span>
-<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>        cambio = dinero - 10;</span>
-<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>        Serial.print("Su cambio es de: ");</span>
-<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>        Serial.println(cambio);</span>
-<span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>        Serial.print(" pesos.");</span>
-<span id="14"><span class="pr-n mr-3" style="color: blue;">14</span>    }</span>
-<span id="15"><span class="pr-n mr-3" style="color: blue;">15</span>}</span>
+<span id="1"><span class="pr-n mr-3" style="color: blue;"> 1</span>int edad;</span>                    
+<span id="2"><span class="pr-n mr-3" style="color: blue;"> 2</span>int estatura;</span>
+<span id="4"><span class="pr-n mr-3" style="color: blue;"> 4</span>int mayor;</span>
+<span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>void setup(){</span>
+<span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>    Serial.begin(9600);</span>
+<span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>}</span>
+<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>void loop(){</span>
+<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>   numero1 = Serial.read();</span>
+<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>    numero2 = Serial.read();</span>
+<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>    numero3 = Serial.read();</span>
+<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>    mayor = numero1;</span>
+<span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>    if(mayor < numero2){</span>
+<span id="14"><span class="pr-n mr-3" style="color: blue;">14</span>        mayor = numero2;</span>
+<span id="15"><span class="pr-n mr-3" style="color: blue;">15</span>    }</span>
+<span id="16"><span class="pr-n mr-3" style="color: blue;">16</span>    if(mayor < numero3){</span>
+<span id="17"><span class="pr-n mr-3" style="color: blue;">17</span>        mayor = numero3;</span>
+<span id="18"><span class="pr-n mr-3" style="color: blue;">18</span>    }</span>
+<span id="19"><span class="pr-n mr-3" style="color: blue;">19</span>    Serial.print("El número mayor es: ");</span>
+<span id="20"><span class="pr-n mr-3" style="color: blue;">20</span>    Serial.println(mayor);</span>
+<span id="21"><span class="pr-n mr-3" style="color: blue;">21</span>}</span>
                   </code>
                 </pre>
         </div>
         <div id="entradas" class="desactivate">
             <div class="form-group" id="contval0">
                 <input type="text" clase="form-control" id="val0" style="width: 80%; border-color: rgb(220, 220, 220);"
+                    placeholder="Ingrese su dinero">
+            </div>
+            <div class="form-group" id="contval1">
+                <input type="text" clase="form-control" id="val1" style="width: 80%; border-color: rgb(220, 220, 220);"
                     placeholder="Ingrese su dinero">
             </div>
         </div>
@@ -97,21 +106,27 @@
         <br>
         <pre>
         <code class="language-c++ text-justify">
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 1</span>Se declara la variable de tipo entero en la cual se va a almacenar el dinero ingresado por teclado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 2</span>Se declara la variable de tipo entero en la cual se va a almacenar el cambio.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 3</span>Se inicia el ciclo la función de configuración principal del programa.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Luego, se finzaliza la función de configuración.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Una vez abierto, se guarda el valor ingresado por teclado en la variable correspondiente al dinero.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se comprueba con una estructura if si el dinero ingresado es mayor que el requerido.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>De cumlirse lo anterior, se imprime un mensaje el cual informa que el helado fue vendido.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Ahora se calcula el cambio, restando el valor del dinero ingresado con el precio del helado que es 10 pesos.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se imprime un mensaje previo el cual acompaña el resultado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Se imprime el valor del cambio.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se imprime las unidades que acompañan al valor del cambio, en este caso pesos.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">14</span>Se cierra la estructura if.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">15</span>Se termina la función de ciclo infinito.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 1</span>Se declara la variable de tipo entero en la cual se va a almacenar el primer número ingresado por teclado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 2</span>Se declara la variable de tipo entero en la cual se va a almacenar el segundo número ingresado por teclado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 3</span>Se declara la variable de tipo entero en la cual se va a almacenar el tercer número ingresado por teclado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Se declara la variable de tipo entero en la cual se va a almacenar el número mayor.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Se inicia el ciclo la función de configuración principal del programa.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Luego, se finzaliza la función de configuración.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Una vez abierto, se guarda el valor ingresado por teclado en la variable correspondiente al número 1.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se guarda el valor ingresado por teclado en la variable correspondiente al número 2.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se guarda el valor ingresado por teclado en la variable correspondiente al número 3.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Ahora se iguala la variable mayor a el primer número.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se verifica si la variable mayor es menor que el número 2 utilizando la estructura if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">14</span>De cumplirse la condición anterior, se iguala la variable mayor al número 2.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">15</span>Se cierra la estructura if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">16</span>Se verifica si la variable mayor es menor que el número 3 utilizando la estructura if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">17</span>De cumplirse la condición anterior, se iguala la variable mayor al número 3.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">18</span>Se cierra la estructura if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">19</span>Se imprime un mensaje previo el cual acompaña el resultado obtenido al hacer las comparaciones.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">20</span>Se imprime el número mayor.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">21</span>Se termina la función de ciclo infinito.</span>
         </code>
       </pre>
     </div>
@@ -121,7 +136,7 @@
 
 {% block scripts %}
 <script>
-    var num_entradas = 1,
+    var num_entradas = 2,
         cont = 0,
         valores = []
 
@@ -142,29 +157,22 @@
         var id_select = 'val' + cont,
             valor_entrada = parseInt(document.getElementById(id_select).value)
 
-        if (!isNaN(valor_entrada)) {
+        if(!isNaN(valor_entrada)){
             cont++
             valores.push(valor_entrada)
-            cambio = 0
-            
-            if (cont == num_entradas) {
-                if(valores[0]>=10){
-                    cambio = valores[0]-10
-                }else{
-                    cambio = valores[0]
-                    Swal.fire({
-                    icon: 'error',
-                    title: 'Dinero insuficiente',
-                    text: 'Ingrese más dinero!',
-                    })
-                }
+            mayor = valores[0]
+            if(mayor<valores[1]){
+                mayor = valores[1]
+            }
+
+            if(cont == num_entradas) {
                 document.getElementById('entradas').className = 'desactivate'
                 document.getElementById('siguiente_').className = 'desactivate'
                 document.getElementById('reiniciar_').className = 'button'
                 document.getElementById('salida').className = ''
-                document.getElementById('resultado').innerHTML = cambio
+                document.getElementById('resultado').innerHTML = mayor
                 document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
-            } else {
+            }else{
                 var cont_ante = cont - 1
                 document.getElementById('contval' + cont).classList.remove('desactivate')
                 document.getElementById('contval' + cont_ante).classList.add('desactivate')
