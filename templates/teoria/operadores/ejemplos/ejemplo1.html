@@ -61,7 +61,7 @@
 <span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>void loop(){</span>
 <span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>numero = Serial.read();</span>
 <span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>doble = numero*2;</span>
-<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>Serial.print("El doble del numero es: ");</span>
+<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>Serial.print("El doble del número es: ");</span>
 <span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>Serial.println(doble);</span>
 <span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>}</span>
                   </code>
@@ -75,7 +75,7 @@
         </div>
         <div id="salida" class="desactivate">
             <p>
-                El doble del numero es: <span id="resultado"></span>
+                El doble del número es: <span id="resultado"></span>
             </p>
         </div>
         <div class="botones">
@@ -130,17 +130,25 @@
     document.getElementById('siguiente_').addEventListener('click', () => {
         var id_select = 'val' + cont,
             valor_entrada = parseInt(document.getElementById(id_select).value)
-        cont++
-        valor_entrada *= 2
-        valores.push(valor_entrada)
+        if(!isNaN(valor_entrada)){
+            cont++
+            valor_entrada *= 2
+            valores.push(valor_entrada)
 
-        if (cont == num_entradas) {
-            document.getElementById('entradas').className = 'desactivate'
-            document.getElementById('siguiente_').className = 'desactivate'
-            document.getElementById('reiniciar_').className = 'button'
-            document.getElementById('salida').className = ''
-            document.getElementById('resultado').innerHTML = valores[0]
-            document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+            if (cont == num_entradas) {
+                document.getElementById('entradas').className = 'desactivate'
+                document.getElementById('siguiente_').className = 'desactivate'
+                document.getElementById('reiniciar_').className = 'button'
+                document.getElementById('salida').className = ''
+                document.getElementById('resultado').innerHTML = valores[0]
+                document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
+            }
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Dato no valido',
+                text: 'Ingrese un dato númerico!',
+            })
         }
     })
 
