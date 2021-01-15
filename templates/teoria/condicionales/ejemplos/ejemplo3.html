@@ -36,7 +36,7 @@
             <h1 style="padding-bottom: 1em;">Ejemplo #3</h1>
             <div class="col-md-5" id="mod">
                 <h3>Enunciado</h3><br>
-                <p>
+                <p class="text-justify">
                     En un parque de diversiones se desea implementar un programa que le permita al operador determinar si 
                     una persona es apta para poder entrar a una atracción. Para saber si una persona es apta, se debe tomar 
                     en cuenta la edad y la estatura, si su edad esta en un rango de 13 a 60 años y su estatura es mayor a 
@@ -70,7 +70,7 @@
 <span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>        Serial.print("El usuario puede ingresar a la atracción.");</span>
 <span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>    }</span>
 <span id="14"><span class="pr-n mr-3" style="color: blue;">14</span>    else if(estatura < 160 || edad < 13 || edad > 60){</span>
-<span id="15"><span class="pr-n mr-3" style="color: blue;">15</span>        if(estatura < 160 && edad < 13 || edad > 60</13>){</span>
+<span id="15"><span class="pr-n mr-3" style="color: blue;">15</span>        if(estatura < 160 && edad < 13 || edad > 60){</span>
 <span id="16"><span class="pr-n mr-3" style="color: blue;">16</span>            Serial.print("Estatura y edad no cumplen.");</span>
 <span id="17"><span class="pr-n mr-3" style="color: blue;">17</span>        }</span>
 <span id="18"><span class="pr-n mr-3" style="color: blue;">18</span>        else if(edad < 13 && edad > 60){</span>
@@ -89,7 +89,7 @@
                 <input type="text" clase="form-control" id="val0" style="width: 80%; border-color: rgb(220, 220, 220);"
                     placeholder="Ingrese la edad">
             </div>
-            <div class="form-group" id="contval1">
+            <div class="form-group desactivate" id="contval1">
                 <input type="text" clase="form-control" id="val1" style="width: 80%; border-color: rgb(220, 220, 220);"
                     placeholder="Ingrese la estatura">
             </div>
@@ -111,27 +111,31 @@
         <br>
         <pre>
         <code class="language-c++ text-justify">
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 1</span>Se declara la variable de tipo entero en la cual se va a almacenar el primer número ingresado por teclado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 2</span>Se declara la variable de tipo entero en la cual se va a almacenar el segundo número ingresado por teclado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 3</span>Se declara la variable de tipo entero en la cual se va a almacenar el tercer número ingresado por teclado.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Se declara la variable de tipo entero en la cual se va a almacenar el número mayor.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Se inicia el ciclo la función de configuración principal del programa.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Luego, se finzaliza la función de configuración.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Una vez abierto, se guarda el valor ingresado por teclado en la variable correspondiente al número 1.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se guarda el valor ingresado por teclado en la variable correspondiente al número 2.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se guarda el valor ingresado por teclado en la variable correspondiente al número 3.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Ahora se iguala la variable mayor a el primer número.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se verifica si la variable mayor es menor que el número 2 utilizando la estructura if.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">14</span>De cumplirse la condición anterior, se iguala la variable mayor al número 2.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">15</span>Se cierra la estructura if.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">16</span>Se verifica si la variable mayor es menor que el número 3 utilizando la estructura if.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">17</span>De cumplirse la condición anterior, se iguala la variable mayor al número 3.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">18</span>Se cierra la estructura if.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">19</span>Se imprime un mensaje previo el cual acompaña el resultado obtenido al hacer las comparaciones.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">20</span>Se imprime el número mayor.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">21</span>Se termina la función de ciclo infinito.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 1</span>Se declara la variable de tipo entero en la cual se va a almacenar la edad ingresada por teclado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 2</span>Se declara la variable de tipo entero en la cual se va a almacenar la estatura ingresada por teclado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 3</span>Se inicia el ciclo la función de configuración principal del programa.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Luego, se finzaliza la función de configuración.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Se imprime un mensaje en el que se pide la edad al usuario.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se guarda el valor ingresado por teclado en la variable correspondiente a la edad.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Se imprime un mensaje en el que se pide la estatura al usuario.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se guarda el valor ingresado por teclado en la variable correspondiente a la estatura.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se comprueba si se cumplen las condiciones dadas en el problema a tarvés de una estructura if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>De cumplirse la condición anterior, se imprime un mensaje que confirme que el usuario puede ingresar.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se cierra la estructura if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">14</span>Se verifica si alguna de las condiones no se cumplen utilizando en este caso la estructura else if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">15</span>De cumplirse la condición anterior, se comprueba si ninguna condición se cumple utilizando una estructura if anidada.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">16</span>Nuevamente, si se cumple la condición, se imprime un mensaje en el que diga que ninguna condición se cumple y por ende el usuario no puede ingresar.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">17</span>Se cierra la estructura if anidada.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">18</span>Ahora, se verifica si una de las condiciones no se cumple utilizando la estructura else if anidada.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">19</span>De cumplirse la condición anterior, se imprime un mensaje diciendo que no se cumple dicha condición.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">20</span>Se cierra la estructura else if anidada.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">21</span>Luego, se verifica si la otra condición no se cumple utilizando la estructura else if anidada.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">22</span>De cumplirse la condición anterior, se imprime un mensaje diciendo que no se cumple dicha condición.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">23</span>Se cierra la estructura else if anidada.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">24</span>Se cierra la estructura else if.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">25</span>Se termina la función de ciclo infinito.</span>
         </code>
       </pre>
     </div>
@@ -165,17 +169,31 @@
         if(!isNaN(valor_entrada)){
             cont++
             valores.push(valor_entrada)
-            mayor = valores[0]
-            if(mayor<valores[1]){
-                mayor = valores[1]
+            mensaje = ''
+            if(valores[1]>=160 && valores[0]>=13 && valores[0]<=60){
+                mensaje = 'El usuario puede ingresar a la atracción.'
             }
+            else if(valores[1]<160 && valores[0]<13 || valores[0]>60){
+                mensaje = 'Estatura y edad no cumplen.'
+            }
+            else if(valores[1]<160){
+                if(valores[0]>=13 || valores[0]<=60){
+                    mensaje = 'Estatura no cumple.'
+                }
+            }
+            else if(valores[1]>=160){
+                if(valores[0]<13 || valores[0]>60){
+                    mensaje = 'Edad no cumple.'
+                }
+            }
+            
 
             if(cont == num_entradas) {
                 document.getElementById('entradas').className = 'desactivate'
                 document.getElementById('siguiente_').className = 'desactivate'
                 document.getElementById('reiniciar_').className = 'button'
                 document.getElementById('salida').className = ''
-                document.getElementById('resultado').innerHTML = mayor
+                document.getElementById('resultado').innerHTML = mensaje
                 document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
             }else{
                 var cont_ante = cont - 1
