@@ -87,15 +87,15 @@
         <h3>Explicación</h3><hr/>
       <pre>
         <code class="language-c++ text-justify">
-<span><span class="pr-n mr-3" style="color: blue;"> 1</span>Declaramos una variable llamada número de tipo flotante.</span>
+<span><span class="pr-n mr-3" style="color: blue;"> 1</span>Declaramos una variable llamada flotante de tipo flotante.</span>
 <span><span class="pr-n mr-3" style="color: blue;"> 2</span>Se inicia la función de configuración.</span>
 <span><span class="pr-n mr-3" style="color: blue;"> 3</span>Se comienza la comunicación serial.</span>
-<span><span class="pr-n mr-3" style="color: blue;"> 4</span>Ahora, se finaliza la función de condiguración.</span>
+<span><span class="pr-n mr-3" style="color: blue;"> 4</span>Ahora, se finaliza la función de configuración.</span>
 <span><span class="pr-n mr-3" style="color: blue;"> 5</span>Luego se inicializa la función del ciclo infinito.</span>
 <span><span class="pr-n mr-3" style="color: blue;"> 6</span>Se imprime un mensaje en el que se pide el flotante al usuario.</span>
 <span><span class="pr-n mr-3" style="color: blue;"> 7</span>Se almacena la lectura de lo que se ingresa por teclado en la variable flotante.</span>
 <span><span class="pr-n mr-3" style="color: blue;"> 8</span>Luego, se imprime un mensaje que acompaña el resultado.</span>
-<span><span class="pr-n mr-3" style="color: blue;"> 9</span>Posteriormente se imprime el valor almacenado en la variablevflotante.</span>
+<span><span class="pr-n mr-3" style="color: blue;"> 9</span>Posteriormente, se imprime el valor almacenado en la variable flotante.</span>
 <span><span class="pr-n mr-3" style="color: blue;">10</span>Por último, se termina la función del ciclo infinito.</span>
         </code>
       </pre>
@@ -125,7 +125,7 @@
 
     document.getElementById('siguiente_').addEventListener('click', () => {
         var id_select = 'val' + cont,
-            valor_entrada = parseInt(document.getElementById(id_select).value)
+            valor_entrada = parseFloat(document.getElementById(id_select).value)
         if(!isNaN(valor_entrada)){
             cont++
             valores.push(valor_entrada)
