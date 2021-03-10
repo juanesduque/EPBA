@@ -41,8 +41,8 @@
         <hr/>
         <p class="text-justify">
             Los operadores son un tipo de símbolo o carácter que pueden aparecer en las expresiones u operaciones, estos 
-            indican al programa la realización de determinadas operaciones lógicas o matemáticas. Se pueden aplicar a 
-            variables u otros objetos denominados operandos los cuales luego de ser operadas van a arrojar valores ya sea 
+            indican al programa la realización de determinadas operaciones lógicas o matemáticas. Estos se pueden aplicar a 
+            variables u otros objetos denominados operandos los cuales luego de ser operados van a arrojar valores ya sea 
             de tipo numérico o booleano, dependiendo cuál sea el caso.
         </p>
     </div>
@@ -66,7 +66,7 @@
         <hr/>
         <p class="text-justify">
             Los operadores lógicos son un tipo de símbolo que puede aparecer en las expresiones lógicas, e indican al 
-            compilador la realización de determinadas operaciones lógicas, de las cuales se va a obtener valores booleanos 
+            compilador la realización de determinadas operaciones lógicas, de las cuales se van a obtener valores booleanos 
             ya sea, true o false, 1 o 0 y, en el caso de Arduino high o low. Con ese resultado se puede dar control a un 
             programa utilizando las demás estructuras que brindan dicha posibilidad.
         </p>
@@ -106,7 +106,7 @@ int dato = +18;
         <p class="text-justify">
             Por otra parte, los <i>bidireccionales</i> son los que tienen operandos a cada lado y son estos los que permiten 
             realizar operacionas matemáticas tales como la suma, resta, multiplicación y división, en este caso, en la 
-            variable se guarda el resultado de la operación que se realice, en el siguiente fragmento se muestra:
+            variable se guarda el resultado de la operación que se realice, en el siguiente fragmento se muestra cómo:
         </p>
         <div class="col-md-8 code mx-auto text-justify">
             <pre>
@@ -128,7 +128,7 @@ int numero = 20;
         </div>
         <p class="text-justify">
             Por último, se tienen los operadores lógicos, estos son únicamente <i>bidireccionales</i>, es decir, tiene un 
-            operando a cada lado y de esta manera evalua si una expresión es falsa o verdadera. En el siguiente fragmento 
+            operando a cada lado y de esta manera evalúa si una expresión es falsa o verdadera. En el siguiente fragmento 
             se muestra cómo:
         </p>
         <div class="col-md-8 code mx-auto text-justify">
@@ -149,7 +149,7 @@ bool estado = (20>=10);
             <thead class="text-center">
                 <tr style="background-color: #0f8f94; color: black;">
                     <th scope="col">Nombre</th>
-                    <th scope="col">Operador Abreviado</th>
+                    <th scope="col">Operador abreviado</th>
                     <th scope="col">Significado</th>
                 </tr>
             </thead>
@@ -272,17 +272,17 @@ bool estado = (20>=10);
                 <tr>
                     <td class="font-weight-bold">AND Lógico (&&)</td>
                     <td>expr1 && expr2</td>
-                    <td class="text-justify">Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false.</td>
+                    <td class="text-justify">Cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false.</td>
                 </tr>
                 <tr>
                     <td class="font-weight-bold">OR lógico (||)</td>
                     <td>expr1 || expr2</td>
-                    <td class="text-justify">Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false</td>
+                    <td class="text-justify">Cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false</td>
                 </tr>
                 <tr>
                     <td class="font-weight-bold">NOT lógico (!)</td>
                     <td>!expr</td>
-                    <td class="text-justify">Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true</td>
+                    <td class="text-justify">Niega la expresión o el valor al que se le antepone la negación.</td>
                 </tr>
             </tbody>
         </table>
