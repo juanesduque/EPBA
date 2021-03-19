@@ -141,7 +141,7 @@
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Se inicia la función de configuración principal del programa.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Luego, se finzaliza la función de configuración.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desee ejecutar.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desea ejecutar.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se imprime un mensaje en el que se pide el primer número al usuario.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Se guarda el valor ingresado por teclado en la variable correspondiente al número 1.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Se imprime un mensaje en el que se pide el segundo número al usuario.</span>
@@ -170,7 +170,7 @@
 <span id=""><span class="pr-n mr-3" style="color: blue;">33</span>Se imprime el número 1.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;">34</span>Se cierra la estructura else.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;">35</span>Se cierra la estructura else if.</span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">36</span>Se comprueba con una estructura if si el número 3 es el menor.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">36</span>Se comprueba con una estructura else if si el número 3 es el menor.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;">37</span>De cumlirse lo anterior, se comprueba con otra estructura if anidada si el número 1 es menor que el número 2.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;">38</span>Ahora, si se cumple nuevamente la condición se imprime el número 3.</span>
 <span id=""><span class="pr-n mr-3" style="color: blue;">39</span>Se imprime el número 1.</span>
@@ -221,26 +221,26 @@
             n3 = valores[2]
             if(n1<n2 && n2<n3){
                 if(n2<n3){
-                    mensaje = n1 + ' ' + n2 + ' ' + n3
+                    mensaje = n1 + ', ' + n2 + ', ' + n3
                 }
                 else if(n3 < n2){
-                    mensaje = n1 + ' ' + n3 + ' ' + n2
+                    mensaje = n1 + ', ' + n3 + ', ' + n2
                 }
             }
             else if(n2<n1 && n2<n3){
                 if(n1<n3){
-                    mensaje = n2 + ' ' + n1 + ' ' + n3
+                    mensaje = n2 + ', ' + n1 + ', ' + n3
                 }
                 else if(n3 < n1){
-                    mensaje = n2 + ' ' + n3 + ' ' + n1
+                    mensaje = n2 + ', ' + n3 + ', ' + n1
                 }
             }
             else if(n3<n1 && n3<n2){
                 if(n1<n2){
-                    mensaje = n3 + ' ' + n1 + ' ' + n2
+                    mensaje = n3 + ', ' + n1 + ', ' + n2
                 }
                 else if(n2 < n1){
-                    mensaje = n3 + ' ' + n2 + ' ' + n1
+                    mensaje = n3 + ', ' + n2 + ', ' + n1
                 }
             }
 
