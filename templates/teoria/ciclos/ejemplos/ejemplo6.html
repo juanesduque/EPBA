@@ -37,8 +37,8 @@
             <div class="col-md-5" id="mod">
                 <h3>Enunciado</h3><br>
                 <p>
-                    Realizar un programa que me muestre los números pares comprendidos entre 1 y el número que ingrese el 
-                    usuario, y que imprima el total de números pares encontrados.
+                    Realizar un programa que pida al usuario enteros dentro de un ciclo while, el ciclo se cerrará cuando 
+                    la suma de estos enteros sean igual o mayor a 50.
                 </p>
                 <a href="#" id="empezar" class="button">Empezar</a>
             </div>
@@ -53,30 +53,20 @@
         <div class="text-justify mt-2">
             <pre>
                   <code class="language-c++">
-<span id="1"><span class="pr-n mr-3" style="color: blue;"> 1</span></span>                    
-<span id="2"><span class="pr-n mr-3" style="color: blue;"> 2</span></span>
-<span id="3"><span class="pr-n mr-3" style="color: blue;"> 3</span></span>
-<span id="4"><span class="pr-n mr-3" style="color: blue;"> 4</span></span>
-<span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span></span>
-<span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span></span>
-<span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span></span>
-<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span></span>
-<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span></span>
-<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span></span>
-<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span></span>
-<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span></span>
-<span id="13"><span class="pr-n mr-3" style="color: blue;">13</span></span>
-<span id="14"><span class="pr-n mr-3" style="color: blue;">14</span></span>
-<span id="15"><span class="pr-n mr-3" style="color: blue;">15</span></span>
-<span id="16"><span class="pr-n mr-3" style="color: blue;">16</span></span>
-<span id="17"><span class="pr-n mr-3" style="color: blue;">17</span></span>
-<span id="18"><span class="pr-n mr-3" style="color: blue;">18</span></span>
-<span id="19"><span class="pr-n mr-3" style="color: blue;">19</span></span>
-<span id="20"><span class="pr-n mr-3" style="color: blue;">20</span></span>
-<span id="21"><span class="pr-n mr-3" style="color: blue;">21</span></span>
-<span id="22"><span class="pr-n mr-3" style="color: blue;">22</span></span>
-<span id="23"><span class="pr-n mr-3" style="color: blue;">23</span></span>
-<span id="24"><span class="pr-n mr-3" style="color: blue;">24</span></span>
+<span id="1"><span class="pr-n mr-3" style="color: blue;"> 1</span>int numero = 0;</span>
+<span id="2"><span class="pr-n mr-3" style="color: blue;"> 2</span>int n = 0;</span>                    
+<span id="3"><span class="pr-n mr-3" style="color: blue;"> 3</span>void setup(){</span>
+<span id="4"><span class="pr-n mr-3" style="color: blue;"> 4</span>    Serial.begin(9600);</span>
+<span id="5"><span class="pr-n mr-3" style="color: blue;"> 5</span>}</span>
+<span id="6"><span class="pr-n mr-3" style="color: blue;"> 6</span>void loop(){</span>
+<span id="7"><span class="pr-n mr-3" style="color: blue;"> 7</span>    while(numero<=50){</span>
+<span id="8"><span class="pr-n mr-3" style="color: blue;"> 8</span>        Serial.print("Ingrese un número: ");</span>
+<span id="9"><span class="pr-n mr-3" style="color: blue;"> 9</span>        n = Serial.read();</span>
+<span id="10"><span class="pr-n mr-3" style="color: blue;">10</span>        numero = numero+n;</span>
+<span id="11"><span class="pr-n mr-3" style="color: blue;">11</span>        Serial.print("El número está en: ");</span>
+<span id="12"><span class="pr-n mr-3" style="color: blue;">12</span>        Serial.print(numero);</span>
+<span id="13"><span class="pr-n mr-3" style="color: blue;">13</span>    }</span>
+<span id="14"><span class="pr-n mr-3" style="color: blue;">14</span>}</span>
                   </code>
                 </pre>
         </div>
@@ -84,10 +74,6 @@
             <div class="form-group" id="contval0">
                 <input type="text" clase="form-control" id="val0" style="width: 80%; border-color: rgb(220, 220, 220);"
                     placeholder="Ingrese un número">
-            </div>
-            <div class="form-group desactivate" id="contval1">
-                <input type="text" clase="form-control" id="val1" style="width: 80%; border-color: rgb(220, 220, 220);"
-                    placeholder="Ingrese otro número">
             </div>
         </div>
         <div id="salida" class="desactivate">
@@ -107,30 +93,20 @@
         <br>
         <pre>
         <code class="language-c++ text-justify">
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 1</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 2</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 3</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">10</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">11</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">12</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">13</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">14</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">15</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">16</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">17</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">18</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">19</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">20</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">21</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">22</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">23</span></span>
-<span id=""><span class="pr-n mr-3" style="color: blue;">24</span></span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 1</span>Se declara la variable de tipo entero la cual va a almacenar el valor de la suma de los números.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 2</span>Se declara la variable de tipo entero la cual va a almacenar el valor de n.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 3</span>Se inicia la función de configuración principal del programa.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 4</span>Ahora se da inicio a la comunicación serial a una velocidad de 9600 baudios.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 5</span>Luego, se finzaliza la función de configuración.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 6</span>Se inicializa también la función de ciclo infinito del programa en el cual se pone todo el código que se desea ejecutar.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 7</span>Se abre el ciclo while el cuál va a funcionar siempre y cuando la suma de los números sea menor o igual a 50.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 8</span>Se imprime un mensaje informativo, el cual pide al usuario ingresar un número.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;"> 9</span>Se lee el puerto serial para almacenar el valor ingresado por teclado en la variable correspondiente al número.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">10</span>Ahora se realiza la sumatoria del número actual con el número ingresado.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">11</span>Se imprime un mensaje informativo, el cual acompaña el resultado de la suma actual.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">12</span>Se imprime el valor de la suma.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">13</span>Se cierra la estructura while.</span>
+<span id=""><span class="pr-n mr-3" style="color: blue;">14</span>Se termina la función de ciclo infinito.</span>
         </code>
       </pre>
     </div>
@@ -140,7 +116,7 @@
 
 {% block scripts %}
 <script>
-    var num_entradas = 2,
+    var num_entradas = 1,
         cont = 0,
         valores = []
 
@@ -158,29 +134,29 @@
     })
 
     document.getElementById('siguiente_').addEventListener('click', () => {
-        var id_select = 'val' + cont,
-            valor_entrada = parseInt(document.getElementById(id_select).value)
+        var valor_entrada = parseInt(document.getElementById('val0').value),
+            mensaje = '',
+            suma = 0
 
 
         if (!isNaN(valor_entrada)) {
-            cont++
             valores.push(valor_entrada)
-            //Código
-
-            if (cont == num_entradas) {
+            for(let i=0; i<valores.length; i++){
+                    suma += valores[i]
+            }
+            mensaje = 'El número está en: ' + suma
+            if(suma<=50){
+                document.getElementById('val0').value = ''
+                document.getElementById('salida').className = ''
+                document.getElementById('resultado').innerHTML = mensaje
+            }else{
                 document.getElementById('entradas').className = 'desactivate'
                 document.getElementById('siguiente_').className = 'desactivate'
                 document.getElementById('reiniciar_').className = 'button'
-                document.getElementById('salida').className = ''
-                document.getElementById('resultado').innerHTML = mayor
+                document.getElementById('resultado').innerHTML = mensaje
                 document.getElementById('expli').className = 'col-md-5 mx-auto mod1'
-            } else {
-                var cont_ante = cont - 1
-                document.getElementById('contval' + cont).classList.remove('desactivate')
-                document.getElementById('contval' + cont_ante).classList.add('desactivate')
             }
-
-        } else {
+        }else{
             Swal.fire({
                 icon: 'error',
                 title: 'Dato no válido',

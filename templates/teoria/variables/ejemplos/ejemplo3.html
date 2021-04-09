@@ -8,7 +8,7 @@
 
 {% block headers %}
 <div id="header-wrapper">
-    <div id="header" class="container row">
+    <div id="header" class="container row mx-auto">
         <div id="logo">
             <h1>
                 <a href="{% url 'main_app:main' %}">Arduino</a>
@@ -127,8 +127,7 @@
     document.getElementById('siguiente_').addEventListener('click', () => {
         var id_select = 'val' + cont,
             valor_entrada = parseFloat(document.getElementById(id_select).value)
-
-        if (!isNaN(valor_entrada)) {
+        if (!isNaN(valor_entrada)){
             valores.push(valor_entrada)
             cont++
             if (cont == num_entradas) {
