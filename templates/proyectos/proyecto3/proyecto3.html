@@ -47,7 +47,7 @@
 			una luz y escuchar una alarma justo en el momento en el que la caldera llega a cierta temperatura, a pesar de 
 			que el sistema está montado, falta ser configurado para que este funcione de la mejor manera y en los límites 
 			que se necesitan. Por esta razón, se pide desarrollar un programa que logre configurar de la mejor manera este 
-			sistema, ya que es muy importanto puesto que es este el que permite tener un buen control de las calderas y por 
+			sistema, ya que es muy importante puesto que es este el que permite tener un buen control de las calderas y por 
 			ende tener un buen producto. El sistema debe leer la temperatura de las calderas y dependiendo de esto, primero 
 			se enciende la luz, pero si la temperatura sigue subiendo y llega a otro límite, se encenderá la alarma.
         </p>
@@ -216,7 +216,7 @@
         '3': {
             'line_code':11,
             'correct_line':2,
-            'congratulation':'Para almacenar una lectura, se debe igualar una variabla en la cual se va a almacenar la lectura a el comando que permite leer los pines análogos, en este caso el comando analogRead y entre paréntesis se pone el nombre que se le dio al pin que se va a leer. Siempre recordar que se debe finalizar con un punto y coma.',
+            'congratulation':'Para almacenar una lectura, se debe igualar una variable en la cual se va a almacenar la lectura a el comando que permite leer los pines análogos, en este caso el comando analogRead y entre paréntesis se pone el nombre que se le dio al pin que se va a leer. Siempre recordar que se debe finalizar con un punto y coma.',
             'explaincode':'Se debe almacenar la lectura del sensor que se guarda en la variable SensorTemperatura en una variable para posteriormente mostrarla o realizar cualquier operación con ella, ¿Qué línea de código viene aquí?',
             'values':['temperatura = analogRead();','temperatura = analogRead(SensorTemperatura);','temperatura = analogRead(SensorTemperatura)','analogRead(SensorTemperatura);']
         },
@@ -235,7 +235,7 @@
             'values':['digitalWrite(alarma, HIGH);','digitalWrite(alarma, HIGH)','digitalWrite(alarma);','digitalWrite(HIGH);']
 		},
 		'6': {
-            'line_code':20,
+            'line_code':23,
             'correct_line':4,
             'congratulation':'De igual forma para imprimir valores almacenados en variables se puede utilizar el comando Serial.print y dentro del paréntesis basta con colocar el nombre de la variable sin comillas, este permite mostrar el valor almacenado en el monitor serial.',
             'explaincode':'Por último, como los valores de los parámetros que afectan el cultivo los cuales se midieron con los sensores están almacenadas en variables, es necesario imprimir en el monitor serial cada variable, ¿Qué línea de código viene aquí?',
