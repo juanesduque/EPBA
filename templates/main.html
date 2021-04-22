@@ -71,188 +71,170 @@
             </div>
         </div>
         <hr/><br>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row mx-auto">
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>1. Variables</h2>
-                        <div class="mx-auto text-center" style="width:350px;">
-                            <img src="{% static 'Im/variables.png' %}" style="width: 100%;"/>
-                        </div>
-                        <br>
-                        <p class="text-justify">
-                            Se explicará qué son las variables, cuales son sus funciones y la importancia que estas tienen 
-                            en la programación. Se verán sus diferentes tipos y cómo pueden ser utilizadas a lo largo de 
-                            los códigos.
-                        </p>
-                        <a href="{% url 'variables_app:variables' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>2. Operadores</h2>
-                        <div class="mx-auto" style="width:300px">
-                            <img src="{% static 'Im/operadores.png' %}" style="width:90%"/>
-                        </div>
-                        <p class="text-justify">
-                            Se van a mostrar los operadores y sus usos, la importancia que estos tienen y, como en las 
-                            matemáticas, estos son de vital importancia a la hora de resolver problemas, ya que permiten 
-                            la manipulación de la información y los datos.
-                        </p>
-                        <a href="{% url 'operadores_app:operadores' %}" class="button">Empezar</a>
-                    </div>
+        <div class="row mx-auto">
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>1. Variables</h2>
+                <div class="mx-auto text-center" style="width:350px;">
+                    <img src="{% static 'Im/variables.png' %}" style="width: 100%;"/>
                 </div>
-                <div class="row mx-auto">
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>3. Condicionales</h2>
-                        <div class="mx-auto" style="width:300px">
-                            <img src="{% static 'Im/condiciones.png' %}" style="width:100%"/>
-                        </div>
-                        <br>
-                        <p class="text-justify">
-                            En los condicionales se va a mostrar la forma en la que estos se deben implementar como 
-                            estructura para hacer que un código tenga una mayor complejidad y por ende, un mejor manejo de 
-                            su flujo de ejecución.
-                        </p>
-                        <a href="{% url 'condicionales_app:condicionales' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>4. Ciclos</h2>
-                        <div class="mx-auto" style="width:300px">
-                            <img src="{% static 'Im/ciclos.png' %}" style="width:80%;"/>
-                        </div>
-                        <p class="text-justify">
-                            En los ciclos se va a explicar su estructura y sintaxis, además, la importancia  y ventajas 
-                            que este brinda debido a el uso que se le puede dar para repetir un número determido de veces 
-                            cualquier acción u operación que se desee realizar.
-                        </p>
-                        <a href="{% url 'ciclos_app:ciclos' %}" class="button">Empezar</a>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row mx-auto">
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>5. Arreglos</h2>
-                        <br>
-                        <div class="mx-auto" style="width:400px">
-                            <img src="{% static 'Im/arreglos.png' %}"/>
-                        </div>
-                        <br><br>
-                        <p class="text-justify">
-                            En este módulo se va a definir qué es un arreglo, su uso, importancia y las manera de 
-                            implementarlos en un programa para que este sea de gran utilidad, además, la forma en que se 
-                            recorren y cómo pueden ser vistos dependiendo de la necesidad.
-                        </p>
-                        <a href="{% url 'arreglos_app:arreglos' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>6. Matrices</h2>
-                        <div class="mx-auto" style="width:400px;">
-                            <img src="{% static 'Im/matrices.png' %}" style="width: 100%;"/>
-                        </div>
-                        <p class="text-justify">
-                            En este módulo, al igual que en los arreglos, se va a dar la definición de matrices, su uso, 
-                            importancia y la manera en que se debe de usar dentro de un algoritmo para que esta sea una 
-                            gran herramienta.
-                        </p>
-                        <a href="{% url 'matrices_app:matrices' %}" class="button">Empezar</a>
-                    </div>
-                </div>
-                <div class="row mx-auto">
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>7. Funciones</h2>
-                        <div class="mx-auto" style="width:300px;">
-                            <img src="{% static 'Im/funciones.png' %}" style="width: 90%;"/>
-                        </div>
-                        <p class="text-justify">
-                            Aquí se van a explicar qué son las funciones, para qué se usan, cómo se usan y cómo no, su 
-                            sintaxis. Además, se mostrarán algunos ejemplos fáciles con los que se entenderá de mejor 
-                            manera el gran potencial de esta herramienta.
-                        </p>
-                        <a href="{% url 'funciones_app:funciones' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>8. Clases</h2>
-                        <br>
-                        <div class="mx-auto" style="width:300px;">
-                            <img src="{% static 'Im/clases.png' %}" style="width: 100%;"/>
-                        </div>
-                        <br><br>
-                        <p class="text-justify">
-                            En esta sección, aunque no es muy usado en Arduino, se explican qué son las clases, para qué 
-                            sirven y cómo se pueden visualizar y utilizar en un programa. Además, se muestran ejemplos de 
-                            cómo se utilizan.
-                        </p>
-                        <a href="{% url 'clases_app:clases' %}" class="button">Empezar</a>
-                    </div> 
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row mx-auto">
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>9. Variables como pines</h2>
-                        <div class="mx-auto" style="width:400px">
-                            <img src="{% static 'Im/vcp.png' %}" style="width: 100%;"/>
-                        </div>
-                        <br>
-                        <p class="text-justify">
-                            Este módulo es muy importante debido a que en este caso, en las variables ya se almecenan 
-                            datos, pero datos provenientes de pines que tiene el sistema embebido de Arduino, aquí se 
-                            explica a fondo cómo se usan y qué se hace con ellas.
-                        </p>
-                        <a href="{% url 'vcp_app:vcp' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>10. Pines análogos</h2>
-                        <div class="mx-auto" style="width:300px">
-                            <img src="{% static 'Im/pinesanalogos.png' %}" style="width: 90%;"/>
-                        </div>
-                        <p class="text-justify">
-                            Es de vital importancia entender cómo se comporta Arduino a nivel de hardware, por esa razón, 
-                            aquí se explicará qué es un pin análogo, cómo funciona y para qué se usa en la programación 
-                            con Arduino dirigida al hardware.
-                        </p>
-                        <a href="{% url 'pines_analogos_app:pines_analogos' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>11. Pines digitales</h2>
-                        <div class="mx-auto" style="width:400px">
-                            <br>
-                            <img src="{% static 'Im/pinesdigitales.png' %}" style="width: 100%;"/>
-                        </div>
-                        <br>
-                        <p class="text-justify">
-                            Es muy importante entender cómo se comporta Arduino a nivel de hardware, por esta razón, en 
-                            este módulo se explicará qué es un pin digital, cómo funciona y para qué se usa en la 
-                            programación con Arduino dirigida al hardware.
-                            <p>
-                        </p>
-                        <a href="{% url 'pines_digitales_app:pines_digitales' %}" class="button">Empezar</a>
-                    </div>
-                    <div class="col-md-5 mb-md-5" id="mod">
-                        <h2>12. PWM</h2>
-                        <div class="mx-auto" style="width:160px">
-                            <img src="{% static 'Im/pwm.png' %}" style="width: 80%;"/>
-                        </div>
-                        <p class="text-justify">
-                            Aquí se endentenderá mejor el concepto de PWM, se explicará un poco de qué se trata, para qué 
-                            sirve y cómo se aplica en la programación con Arduino. Además, se mostrará a grandes rasgos su 
-                            uso y la aplicabilidad que este tiene en los programas.
-                        </p>
-                        <a href="{% url 'pwm_app:pwm' %}" class="button">Empezar</a>
-                    </div>
-                </div>
-              </div>
+                <br>
+                <p class="text-justify">
+                    Se explicará qué son las variables, cuales son sus funciones y la importancia que estas tienen 
+                    en la programación. Se verán sus diferentes tipos y cómo pueden ser utilizadas a lo largo de 
+                    los códigos.
+                </p>
+                <a href="{% url 'variables_app:variables' %}" class="button">Empezar</a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" id="anterior">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" id="siguiente">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>2. Operadores</h2>
+                <div class="mx-auto" style="width:300px">
+                    <img src="{% static 'Im/operadores.png' %}" style="width:90%"/>
+                </div>
+                <p class="text-justify">
+                    Se van a mostrar los operadores y sus usos, la importancia que estos tienen y, como en las 
+                    matemáticas, estos son de vital importancia a la hora de resolver problemas, ya que permiten 
+                    la manipulación de la información y los datos.
+                </p>
+                <a href="{% url 'operadores_app:operadores' %}" class="button">Empezar</a>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>3. Condicionales</h2>
+                <div class="mx-auto" style="width:300px">
+                    <img src="{% static 'Im/condiciones.png' %}" style="width:100%"/>
+                </div>
+                <br>
+                <p class="text-justify">
+                    En los condicionales se va a mostrar la forma en la que estos se deben implementar como 
+                    estructura para hacer que un código tenga una mayor complejidad y por ende, un mejor manejo de 
+                    su flujo de ejecución.
+                </p>
+                <a href="{% url 'condicionales_app:condicionales' %}" class="button">Empezar</a>
+            </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>4. Ciclos</h2>
+                <div class="mx-auto" style="width:300px">
+                    <img src="{% static 'Im/ciclos.png' %}" style="width:80%;"/>
+                </div>
+                <p class="text-justify">
+                    En los ciclos se va a explicar su estructura y sintaxis, además, la importancia  y ventajas 
+                    que este brinda debido a el uso que se le puede dar para repetir un número determido de veces 
+                    cualquier acción u operación que se desee realizar.
+                </p>
+                <a href="{% url 'ciclos_app:ciclos' %}" class="button">Empezar</a>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>5. Arreglos</h2>
+                <br>
+                <div class="mx-auto" style="width:400px">
+                    <img src="{% static 'Im/arreglos.png' %}"/>
+                </div>
+                <br><br>
+                <p class="text-justify">
+                    En este módulo se va a definir qué es un arreglo, su uso, importancia y las manera de 
+                    implementarlos en un programa para que este sea de gran utilidad, además, la forma en que se 
+                    recorren y cómo pueden ser vistos dependiendo de la necesidad.
+                </p>
+                <a href="{% url 'arreglos_app:arreglos' %}" class="button">Empezar</a>
+            </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>6. Matrices</h2>
+                <div class="mx-auto" style="width:400px;">
+                    <img src="{% static 'Im/matrices.png' %}" style="width: 100%;"/>
+                </div>
+                <p class="text-justify">
+                    En este módulo, al igual que en los arreglos, se va a dar la definición de matrices, su uso, 
+                    importancia y la manera en que se debe de usar dentro de un algoritmo para que esta sea una 
+                    gran herramienta.
+                </p>
+                <a href="{% url 'matrices_app:matrices' %}" class="button">Empezar</a>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>7. Funciones</h2>
+                <div class="mx-auto" style="width:300px;">
+                    <img src="{% static 'Im/funciones.png' %}" style="width: 90%;"/>
+                </div>
+                <p class="text-justify">
+                    Aquí se van a explicar qué son las funciones, para qué se usan, cómo se usan y cómo no, su 
+                    sintaxis. Además, se mostrarán algunos ejemplos fáciles con los que se entenderá de mejor 
+                    manera el gran potencial de esta herramienta.
+                </p>
+                <a href="{% url 'funciones_app:funciones' %}" class="button">Empezar</a>
+            </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>8. Clases</h2>
+                <br>
+                <div class="mx-auto" style="width:300px;">
+                    <img src="{% static 'Im/clases.png' %}" style="width: 100%;"/>
+                </div>
+                <br><br>
+                <p class="text-justify">
+                    En esta sección, aunque no es muy usado en Arduino, se explican qué son las clases, para qué 
+                    sirven y cómo se pueden visualizar y utilizar en un programa. Además, se muestran ejemplos de 
+                    cómo se utilizan.
+                </p>
+                <a href="{% url 'clases_app:clases' %}" class="button">Empezar</a>
+            </div> 
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>9. Variables como pines</h2>
+                <div class="mx-auto" style="width:400px">
+                    <img src="{% static 'Im/vcp.png' %}" style="width: 100%;"/>
+                </div>
+                <br>
+                <p class="text-justify">
+                    Este módulo es muy importante debido a que en este caso, en las variables ya se almecenan 
+                    datos, pero datos provenientes de pines que tiene el sistema embebido de Arduino, aquí se 
+                    explica a fondo cómo se usan y qué se hace con ellas.
+                </p>
+                <a href="{% url 'vcp_app:vcp' %}" class="button">Empezar</a>
+            </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>10. Pines análogos</h2>
+                <div class="mx-auto" style="width:300px">
+                    <img src="{% static 'Im/pinesanalogos.png' %}" style="width: 90%;"/>
+                </div>
+                <p class="text-justify">
+                    Es de vital importancia entender cómo se comporta Arduino a nivel de hardware, por esa razón, 
+                    aquí se explicará qué es un pin análogo, cómo funciona y para qué se usa en la programación 
+                    con Arduino dirigida al hardware.
+                </p>
+                <a href="{% url 'pines_analogos_app:pines_analogos' %}" class="button">Empezar</a>
+            </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>11. Pines digitales</h2>
+                <div class="mx-auto" style="width:400px">
+                    <br>
+                    <img src="{% static 'Im/pinesdigitales.png' %}" style="width: 100%;"/>
+                </div>
+                <br>
+                <p class="text-justify">
+                    Es muy importante entender cómo se comporta Arduino a nivel de hardware, por esta razón, en 
+                    este módulo se explicará qué es un pin digital, cómo funciona y para qué se usa en la 
+                    programación con Arduino dirigida al hardware.
+                    <p>
+                </p>
+                <a href="{% url 'pines_digitales_app:pines_digitales' %}" class="button">Empezar</a>
+            </div>
+            <div class="col-md-5 mb-md-5" id="mod">
+                <h2>12. PWM</h2>
+                <div class="mx-auto" style="width:160px">
+                    <img src="{% static 'Im/pwm.png' %}" style="width: 80%;"/>
+                </div>
+                <p class="text-justify">
+                    Aquí se endentenderá mejor el concepto de PWM, se explicará un poco de qué se trata, para qué 
+                    sirve y cómo se aplica en la programación con Arduino. Además, se mostrará a grandes rasgos su 
+                    uso y la aplicabilidad que este tiene en los programas.
+                </p>
+                <a href="{% url 'pwm_app:pwm' %}" class="button">Empezar</a>
+            </div>
+        </div>
 	</div>
 </div>
 <div id="header-wrapper">
