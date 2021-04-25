@@ -10,13 +10,29 @@
     background-color: black;
     width: 60px;
     height: 60%;
-    margin-top: 105px;
+    margin-top: 60px;
+    border: 2px solid blue;
 }
 #ant{
     background-color: black;
     width: 60px;
     height: 60%;
-    margin-top: 105px;
+    margin-top: 60px;
+    border: 2px solid blue;
+}
+#sig1{   
+    background-color: black;
+    width: 60px;
+    height: 60%;
+    margin-top: 80px;
+    border: 2px solid blue;
+}
+#ant1{
+    background-color: black;
+    width: 60px;
+    height: 60%;
+    margin-top: 80px;
+    border: 2px solid blue;
 }
 #mod{
     text-align: center;	
